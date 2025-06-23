@@ -1,0 +1,46 @@
+{
+  "name": "kfs-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.5",
+    "@mui/material": "^6.4.8",
+    "@next/bundle-analyzer": "^15.3.1",
+    "@tailwindcss/postcss": "^4.0.9",
+    "axios": "^1.8.3",
+    "framer-motion": "^12.5.0",
+    "leaflet": "^1.9.4",
+    "next": "^15.2.3",
+    "next-auth": "^5.0.0-beta.25",
+    "postcss": "^8.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^5.0.0",
+    "react-organizational-chart": "^2.2.1",
+    "react-router-dom": "^7.6.2",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^4.0.9",
+    "tree": "^0.1.3",
+    "treenode": "^0.2.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "typescript": "^5"
+  }
+}
