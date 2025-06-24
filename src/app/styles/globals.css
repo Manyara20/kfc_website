@@ -1,0 +1,111 @@
+/* global.css */
+
+/* Import Tailwind CSS */
+@import "tailwindcss";
+
+/* Custom Fonts */
+@font-face {
+  font-family: 'Futura';
+  font-style: normal;
+  font-weight: 400;
+  font-size:1.2rem;
+  src: url('/fonts/Futura Book font.ttf') format('woff2'),
+       url('/fonts/Futura futura medium bt.ttf') format('woff');
+}
+
+
+/* Define CSS custom properties for colors */
+:root {
+  --background: #ffffff;
+  --foreground: #ffe8e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #000;
+  }
+}
+
+/* Typography System */
+html {
+  font-size: 1.0rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  font-family: 'Futura', Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.5;
+}
+
+/* General Styles */
+.fullscreen-section {
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Twitter Feed Styles */
+.twitter-feed-container {
+  background-color: #ffffff;
+}
+
+.twitter-feed-container .twitter-timeline,
+.twitter-feed-container .twitter-timeline-rendered {
+  background-color: #fff !important;
+  border: none !important;
+  width: 100% !important;
+}
+
+.twitter-feed-container .timeline-TweetList-tweet {
+  background-color: #ffffff !important;
+  border: none !important;
+  padding: 12px !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.twitter-feed-container .timeline-Tweet-text {
+  color: #ffffff !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+
+.twitter-feed-container .timeline-Tweet-author .TweetAuthor-name {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.twitter-feed-container .timeline-Tweet-author .TweetAuthor-screenName,
+.twitter-feed-container .timeline-Tweet-timestamp {
+  color: #e0e0e0 !important;
+}
+
+.twitter-feed-container .timeline-Header,
+.twitter-feed-container .timeline-Footer {
+  display: none !important;
+}
+
+.twitter-feed-container .timeline-TweetList-tweet {
+  border-radius: 0 !important;
+}
+
+.twitter-feed-container .timeline-Tweet-text a {
+  color: #a6192e !important;
+}

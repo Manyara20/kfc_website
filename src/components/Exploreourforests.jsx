@@ -8,77 +8,42 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const forests = [
   {
-    name: 'Karura Forest',
-    image: '/images/forests/karura.jpg',
-    subtitle: 'Urban oasis with trails and waterfalls',
-    href: '/forests/karura-forest',
+    name: 'Masaita Forest Block',
+    image: '/kfc/masaita/masaita.jpeg',
+    subtitle: 'The forest has an area of 4,152ha and is part of the Mau complex',
+    href: '/forests/masaita',
   },
   {
-    name: 'Menengai Forest',
-    image: '/images/forests/Menengai-Forest.jpg',
-    subtitle: 'Volcanic crater with lush greenery',
-    href: '/forests/menengai-forest',
+    name: 'Kenya Forestry College Hospitality Center',
+    image: '/images/forests/menengai.jpg',
+    subtitle: 'The hospitality center offers conferencing…',
+    href: '/forests/kfc-guesthouse-conference-centre',
   },
   {
-    name: 'Mt. Kenya Forest',
+    name: 'Computer Lab',
     image: '/images/forests/mt.kenya.jpg',
-    subtitle: 'Majestic mountain forest with alpine flora',
-    href: '/forests/mt-kenya-forest',
+    subtitle: 'Our state-of-the-art computer lab at Kenya Forestry College is equipped with 40 modern workstations',
+    href: '/forests/comp_lab',
   },
   {
-    name: 'Ngare Ndare Forest',
+    name: 'Tree Nurseries',
     image: '/images/forests/ngare.png',
-    subtitle: 'Canopy walkway and elephant corridor',
-    href: '/forests/ngare-ndare-forest',
+    subtitle: 'Masaita station has two nurseries, one within the college for students training…',
+    href: '/forests/nursery',
   },
   {
-    name: 'Eburu Forest',
+    name: 'Hostels',
     image: '/images/forests/eburu.jpg',
-    subtitle: 'Canopy walkway and elephant corridor',
-    href: '/forests/eburu-forest',
+    subtitle: 'The college has 2 modern hostels with a capacity of 256 complemented...',
+    href: '/forests/hostels',
   },
   {
-    name: 'Kakamega Forest',
+    name: 'Kenya Forestry College Library',
     image: '/images/forests/kakamega.jpg',
-    subtitle: 'Biodiverse rainforest with unique wildlife',
-    href: '/forests/kakamega-forest',
+    subtitle: 'Library is more than a repository of books…',
+    href: '/forests/library',
   },
-  {
-    name: 'Castle Forest',
-    image: '/images/forests/castle.jpeg',
-    subtitle: 'Canopy walkway and elephant corridor',
-    href: '/forests/castle-forest',
-  },
-  {
-    name: 'Michuki Memorial Conservation Forest',
-    image: '/images/forests/michuki.jpg',
-    subtitle: 'Canopy walkway and elephant corridor',
-    href: '/forests/michuki-memorial-conservation',
-  },
-  {
-    name: 'Arabuko Sokoke',
-    image: '/images/forests/arabuko.jpeg',
-    subtitle: 'Coastal forest with rare birds',
-    href: '/forests/arabuko-sokoke-forest',
-  },
-  {
-    name: 'Ngong Hills Forest',
-    image: '/images/forests/ngong.jpeg',
-    subtitle: 'Scenic hills with stunning city views',
-    href: '/forests/ngong-forest',
-  },
-  {
-    name: 'Nairobi Arboretum',
-    image: '/images/forests/arboretum.jpg',
-    subtitle: 'Botanical haven in the city center',
-    href: '/forests/arboretum-forest',
-  },
-  {
-    name: 'Hombe Forest',
-    image: '/images/forests/hombe.jpg',
-    subtitle: 'Serene retreat in lush nature',
-    href: '/forests/hombe-forest-guesthouse',
-  },
+  
 ];
 
 const ForestCardGrid = () => {
@@ -138,7 +103,7 @@ const ForestCardGrid = () => {
           className="text-center mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            Discover Kenya’s Forests
+            Our Facilities
           </h1>
         </motion.div>
 

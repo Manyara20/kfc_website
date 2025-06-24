@@ -9,34 +9,54 @@ const HeroSection = () => {
 
   const slides = [
     {
-      title: "Growing 15 Billion Trees for a Greener Kenya by 2032",
+      title: "Kenya Forestry College",
       subtitle:
-        "Join us in restoring our landscapes, combating climate change, and securing livelihoods",
-      image: "/images/hero/president.jpg",
-      ctaText: "Plant a Tree Today",
-      ctaLink: "#tree-planting",
-      secondaryCtaText: "Adopt a Forest",
-      secondaryCtaLink: "/adopt-a-forest",
-    },
-    {
-      title: "Explore Today, Conserve Forever.",
-      subtitle:
-        "Discover the untamed beauty of our forests, where your adventure fuels vital conservation and empowers local communities",
-      image: "/images/hero/mangrove.png",
-      ctaText: "Explore Our Forests",
-      ctaLink: "Exploreourforests",
-      secondaryCtaText: "Who We Are",
-      secondaryCtaLink: "/about",
-    },
-    {
-      title: "Trees for Better Lives",
-      subtitle:
-        "Enhancing Kenya's tree cover to 30% by 2032 through collective action",
-      image: "/images/hero/cs_plants.jpeg",
-      ctaText: "Explore Our Nurseries",
-      ctaLink: "Exploreournuseries",
+        "Quality Training for changing Climate",
+      image: "/kfc/hero/Hero1.jpg",
+      ctaText: "Read More",
+      ctaLink: "#",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "/contact",
+      secondaryCtaLink: "#",
+    },
+    {
+      title: "Kenya Forestry College",
+      subtitle:
+        "KFC Adminstation",
+      image: "/kfc/hero/kfc_admin_block.jpg",
+      ctaText: "Read More",
+      ctaLink: "#",
+      secondaryCtaText: "Get In Touch",
+      secondaryCtaLink: "#",
+    },
+    {
+      title: "Kenya Forestry College",
+      subtitle:
+        "Sawmill",
+      image: "/kfc/hero/students_sawmill.jpg",
+      ctaText: "Read More",
+      ctaLink: "#",
+      secondaryCtaText: "Get In Touch",
+      secondaryCtaLink: "#",
+    },
+    {
+      title: "Kenya Forestry College",
+      subtitle:
+        "Tree Nursery",
+      image: "/kfc/hero/students_tree_nurssery.jpeg",
+      ctaText: "Read More",
+      ctaLink: "#",
+      secondaryCtaText: "Get In Touch",
+      secondaryCtaLink: "#",
+    },
+    {
+      title: "Kenya Forestry College",
+      subtitle:
+        "Graduation Ceremony",
+      image: "/kfc/hero/graduands.jpg",
+      ctaText: "Read More",
+      ctaLink: "#",
+      secondaryCtaText: "Get In Touch",
+      secondaryCtaLink: "#",
     },
     
   ];

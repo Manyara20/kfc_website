@@ -1,87 +1,219 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Email, Call, AccessTime } from "@mui/icons-material";
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Button,
+  Box,
+  useMediaQuery,
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TikTokIcon from "@mui/icons-material/MusicNote"; // Placeholder for TikTok as MUI doesn't have a TikTok icon
 
-const OfficeHoursPopup = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const TopNavBar = () => {
+  const theme = useTheme();
+  const isExtraSmall = useMediaQuery(theme.breakpoints.down("xs")); // <360px
+  const isSmall = useMediaQuery(theme.breakpoints.down("sm")); // <600px
+  const isMedium = useMediaQuery(theme.breakpoints.down("md")); // <900px
+  const isLarge = useMediaQuery(theme.breakpoints.up("lg")); // >=1200px
 
-  const group2 = [
-    { icon: <Call />, text: "0800 123 456 - Toll Free", priority: 1 },
-    {
-      icon: <AccessTime />,
-      text: "Mon-Fri (8am - 5pm) Sat & Sun CLOSED",
-      priority: 2,
-    },
-    { icon: <Email />, text: "info@kenyaforestservice.org", priority: 1 },
+  // Menu items split into two groups
+  const group1 = [
+    { text: "Staff Mail", priority: 2 },
+    { text: "Student Affairs", priority: 3 },
+    { text: "Tenders", priority: 3 },
+    { text: "Careers", priority: 3 },
   ];
 
-  useEffect(() => {
-    // Show popup after 5 seconds
-    const showTimer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+  const group2 = [
+    { text: "Phone: 0794-976449/0731-976449", priority: 1 },
+    
+  ];
 
-    // Hide popup after 10 seconds if not manually closed
-    const hideTimer = setTimeout(() => {
-      setIsVisible(false);
-    }, 15000); // 5000ms (show) + 10000ms (visible duration)
+  // Filter items based on screen size and priority
+  const visibleGroup1 = group1.filter((item) => {
+    if (isExtraSmall) return item.priority === 1;
+    if (isSmall) return item.priority <= 2;
+    return true;
+  });
 
-    return () => {
-      clearTimeout(showTimer);
-      clearTimeout(hideTimer);
-    };
-  }, []);
-
-  const handleClose = () => {
-    setIsVisible(false);
-  };
+  const visibleGroup2 = group2.filter((item) => {
+    if (isExtraSmall) return item.priority === 1;
+    if (isSmall) return item.priority <= 2;
+    return true;
+  });
 
   return (
-    <>
-      {isVisible && (
-        <div className="fixed top-4 right-4 z-50 animate-fadeIn">
-          <div className="bg-white shadow-lg rounded-lg p-4 max-w-xs w-full relative">
-            <button
-              onClick={handleClose}
-              className="absolute top-2 right-2 text-[#0D3C00] hover:text-gray-700 focus:outline-none"
-              aria-label="Close popup"
+    <AppBar
+      position="static"
+      sx={{
+        backgroundColor: "#fe7c02",
+        padding: { xs: "2px 0", sm: "4px 0", md: "6px 0" },
+      }}
+    >
+      <Toolbar
+        sx={{
+          width: "100%",
+          maxWidth: "100%",
+          margin: "auto",
+          padding: { xs: "0 4px", sm: "0 8px", md: "0 16px" },
+          minHeight: "auto !important",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          flexWrap: { xs: "wrap", md: "nowrap" },
+          overflowX: { xs: "auto", md: "hidden" },
+          whiteSpace: "nowrap",
+          "&::-webkit-scrollbar": { height: "4px" },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "rgba(255,255,255,0.3)",
+            borderRadius: "0px",
+          },
+        }}
+      >
+        {/* Group 1 */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: { xs: 0.5, sm: 1, md: 1.5 },
+            flexShrink: 0,
+            flexGrow: { xs: 1, md: 0 },
+            justifyContent: { xs: "flex-start", md: "flex-start" },
+            minWidth: 0,
+          }}
+        >
+          {visibleGroup1.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                minWidth: 0,
+              }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "white",
+                  fontSize: {
+                    xs: "0.65rem",
+                    sm: "0.75rem",
+                    md: "0.875rem",
+                    lg: "1rem",
+                  },
+                  fontFamily: "'Peugeot', Helvetica, sans-serif",
+                  textTransform: "capitalize",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
+                {item.text}
+              </Typography>
+              {index < visibleGroup1.length - 1 && (
+                <Box
+                  sx={{
+                    width: "1px",
+                    height: { xs: "10px", sm: "12px", md: "14px" },
+                    backgroundColor: "white",
+                    mx: { xs: 0.25, sm: 0.5, md: 0.75 },
+                  }}
                 />
-              </svg>
-            </button>
-            <h2 className="text-lg font-bold text-[#0D3C00] mb-3">Office Hours</h2>
-            <div className="space-y-2">
-              {group2.map((item, index) => (
-                <div key={index} className="flex items-center space-x-2">
-                  <div className="text-[#0D3C00]">
-                    {React.cloneElement(item.icon, {
-                      className: "w-4 h-4",
-                    })}
-                  </div>
-                  <span className="text-[#0D3C00] text-sm   ">
-                    {item.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+              )}
+            </Box>
+          ))}
+        </Box>
+
+        {/* Group 2 */}
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: { xs: 0.5, sm: 1, md: 1.5 },
+            flexShrink: 0,
+            flexGrow: { xs: 1, md: 0 },
+            justifyContent: { xs: "flex-start", md: "flex-end" },
+            minWidth: 0,
+          }}
+        >
+          {visibleGroup2.map((item, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                minWidth: 0,
+              }}
+            >
+              <Typography
+                variant="body2"
+                sx={{
+                  color: "white",
+                  fontSize: {
+                    xs: "0.65rem",
+                    sm: "0.75rem",
+                    md: "0.875rem",
+                    lg: "1rem",
+                  },
+                  fontFamily: "'Peugeot', Helvetica, sans-serif",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                {item.text}
+              </Typography>
+              {index < visibleGroup2.length - 1 && (
+                <Box
+                  sx={{
+                    width: "1px",
+                    height: { xs: "10px", sm: "12px", md: "14px" },
+                    backgroundColor: "white",
+                    mx: { xs: 0.25, sm: 0.5, md: 0.75 },
+                  }}
+                />
+              )}
+            </Box>
+          ))}
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#ffffff",
+              color: "#fe7c02",
+              fontSize: { xs: "0.65rem", sm: "0.75rem", md: "0.875rem" },
+              marginLeft: { xs: 0.5, sm: 1, md: 1.5 },
+              borderRadius: 0,
+              padding: { xs: "2px 8px", sm: "4px 12px", md: "6px 16px" },
+              "&:hover": {
+                backgroundColor: "#e0e0e0",
+              },
+            }}
+          >
+            Apply for a Course
+          </Button>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: { xs: 0.5, sm: 1 },
+              marginLeft: { xs: 0.5, sm: 1, md: 1.5 },
+            }}
+          >
+            <FacebookIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
+            <TwitterIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
+            <InstagramIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
+            <TikTokIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
+          </Box>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
-export default OfficeHoursPopup;
+export default TopNavBar;

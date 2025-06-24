@@ -2,27 +2,28 @@
 import React from "react";
 import FooterBottom from "@/components/FooterBottom";
 import HeroSection from "@/app/homepage/HeroSection";
-import MissionSection from "@/app/homepage/MissionSection";
-import CodeOfConductSection from "@/app/homepage/CodeofConductSection";
+import About from "@/app/homepage/About";
 import NewsSection from "@/app/homepage/NewsSection";
 import Footer from "@/app/homepage/Footer";
-//import FeedSection from "@/app/homepage/FeedSection";
-import Principles from "@/app/homepage/Principles";
+import Courses from "@/app/homepage/Courses";
+import Counter from "@/app/homepage/Counter";
+import Mission from "@/app/homepage/Mission";
+import CoreCourses from "@/app/homepage/CoreCourses"
 import PatnersSection from "@/app/homepage/Patners";
 import Sidebar from "@/app/homepage/Sidebar";
 import Exploreourforests from "@/components/Exploreourforests";
-import Exploreournuseries from "@/components/Exploreournuseries";
 
 
 function HomePageContents() {
   return (
     <div>
       <HeroSection />
-      <MissionSection />
-      <CodeOfConductSection />
-      <Principles />
+      <About />
+      <Mission />
+      <Courses />
+      <CoreCourses />
+      <Counter />
       <Exploreourforests/>
-      <Exploreournuseries/>
       <PatnersSection />
       <NewsSection />
       <Footer />
