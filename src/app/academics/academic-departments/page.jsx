@@ -44,7 +44,7 @@ const departments = [
   },
 ];
 
-const AcademicDepartments = () => {
+const AcademicDepartment = () => {
   return (
     <div>
      <MainNavBar />
@@ -96,4 +96,4 @@ const AcademicDepartments = () => {
   );
 };
 
-export default AcademicDepartments;
+export default AcademicDepartment;
