@@ -1,16 +1,46 @@
 const navigationItems = [
   { label: "Home", link: "/" },
   {
-    label: "About",
+    label: "About Us",
     subItems: [
-      { label: "Organizational Structure", link: "/about/organizational-structure"},
-      { label: "KFS Board", link: "/about/kfs-board" },
-      { label: "Senior Management", link: "/about/senior-management" },
-      { label: "Core Programs", link: "/about/core-programs" },
-      { label: "Other Programs", link: "/about/other-programs" },
-      { label: "Projects", link: "/about/projects" },
+      { label: "History", link: "/about/history"},
+      { label: "College Governance", link: "/about/governance" },
+      { label: "College Adminstration", link: "/about/adminstration" },
+      { label: "Head of Academic Departments", link: "/about/academic-departments" },
+      { label: "Service Charter", link: "/about/charter" },
+     
     ],
   },
+  
+  {
+    label: "Academics",
+    subItems: [
+      { label: "Academic Departments", link: "/academics/academic-departments" },
+      { label: "Portal", link: "/academics/portal" },
+      { label: "Graduation Booklet", link: "/academics/graduands"},
+      {
+        label: "Kenya Forestry College Library",
+        link: "/academics/kfc-lib",
+        subItems: [
+          { label: "KFC Library", link: "https://library.kenyaforestservice.org/", isExternal: true },
+          
+        ],
+      },
+    ],
+  },
+  {
+    label: "Admission",
+    subItems: [
+      { label: "How to Apply", link: "/admission/apply"},
+      { label: "Student Application Form", link: "/admission/apllication-form" },
+      { label: "Deferral Request Form", link: "/admission/deferral-form" },
+      { label: "Student Handbook", link: "/admission/handbook" },
+      { label: "Fees Structure", link: "/admission/fee-structure" },
+      { label: "Service Download Admission Letter", link: "/admission/admission-letter" },
+     
+    ], 
+  },
+  { label: "Facilities", link: "/facilities" },
   {
     label: "Media Center",
     subItems: [
@@ -21,40 +51,10 @@ const navigationItems = [
       { label: "Press Releases", link: "/mediacenter/press-releases" },
     ],
   },
-  {
-    label: "Quick Links",
-    subItems: [
-      { label: "Tree Planting", link: "/quick-links/tree-planting" },
-      { label: "Participatory Forest Management", link: "/quick-links/participatory-forest-management" },
-      { label: "Customer Feedback", link: "/quick-links/CustomerFeedback" },
-      { label: "EcoTourism", link: "/quick-links/background"},
-      {
-        label: "Online Systems",
-        link: "/quick-links/online-systems",
-        subItems: [
-          { label: "Staff Mail", link: "https://mail.kenyaforestservice.org/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.kenyaforestservice.org%2fowa%2f", isExternal: true },
-          { label: "E-Registration", link: "https://sawmillers.kenyaforestservice.org/", isExternal: true },
-          { label: "E-Nursery", link: "https://enursery.kenyaforestservice.org/", isExternal: true },
-          { label: "Research License", link: "/quick-links/online-systems/research-license", isExternal: false },
-          { label: "Monitoring and Evaluation", link: "http://monitoring.kenyaforestservice.org/#/home", isExternal: true },
-        ],
-      },
-    ],
-  },
   { label: "Contact Us", link: "/contacts" },
   {
-    label: "E-Documents",
-    subItems: [
-      { label: "Public Documents", link: "/e-documents/public" },
-      { label: "Legal Documents", link: "/e-documents/legal" },
-      { label: "Policy Documents", link: "/e-documents/policy" },
-      { label: "Staff Documents", link: "/e-documents/staff-documents" },
-      { label: "Video Documentation", link: "/e-documents/video" },
-      { label: "Documents Archive", link: "/e-documents/archive" },
-    ],
-  },
-  { label: "Tenders", link: "/tenders" },
-  { label: "Careers", link: "/careers" },
+    label: "Downloads", link:"/e-documents/public"},
+  
 ];
 
 export default navigationItems;

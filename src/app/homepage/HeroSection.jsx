@@ -114,7 +114,7 @@ const HeroSection = () => {
           <div className="flex gap-2 sm:gap-3 md:gap-8">
             <a
               href={slides[currentSlide].ctaLink}
-              className="inline-block bg-white text-[#0D3C00] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-[#0D3C00] hover:text-white transition-all duration-300"
+              className="inline-block bg-white text-[#fe7c02] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-[#0D3C00] hover:text-white transition-all duration-300"
               style={{
               }}
             >
@@ -122,7 +122,7 @@ const HeroSection = () => {
             </a>
             <a
               href={slides[currentSlide].secondaryCtaLink}
-              className="inline-block bg-[#0D3C00] text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-white hover:text-[#0D3C00] transition-all duration-300"
+              className="inline-block bg-[#fe7c02] text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-white hover:text-[#0D3C00] transition-all duration-300"
               style={{
               }}
             >

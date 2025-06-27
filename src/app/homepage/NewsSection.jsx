@@ -108,7 +108,7 @@ const NewsSection = () => {
         {/* Right Section: Notices Slider */}
         <div className="lg:col-span-1">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-green-900 mb-4">
-            Updates
+            Notices
           </h2>
           {error && <p className="text-red-500 text-center text-base">{error}</p>}
           {notices.length === 0 && !error ? (

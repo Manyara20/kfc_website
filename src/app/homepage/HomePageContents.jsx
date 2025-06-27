@@ -10,6 +10,7 @@ import Counter from "@/app/homepage/Counter";
 import Mission from "@/app/homepage/Mission";
 import CoreCourses from "@/app/homepage/CoreCourses"
 import PatnersSection from "@/app/homepage/Patners";
+import FeedSection from "@/app/homepage/FeedSection"
 import Sidebar from "@/app/homepage/Sidebar";
 import Exploreourforests from "@/components/Exploreourforests";
 
@@ -26,6 +27,7 @@ function HomePageContents() {
       <Exploreourforests/>
       <PatnersSection />
       <NewsSection />
+      <FeedSection />
       <Footer />
       <FooterBottom />
       <Sidebar/>

@@ -79,28 +79,28 @@ const Footer = () => {
           <div className="p-6 sm:p-4 md:p-3">
             <h3 className="text-3xl sm:text-2xl md:text-xl lg:text-lg  font-bold text-white mb-4 sm:mb-3 md:mb-2">
             <p className=" font-bold text-[#fff] leading-[1.8] text-[1.2rem] mb-2">
-              Toll Free
+              Related Links
               </p>
             </h3>
-            <div className="flex items-center gap-3 sm:gap-2 text-2xl sm:text-xl md:text-lg lg:text-base font-semibold text-white mb-3 sm:mb-2">
-              <FaPhone className="text-white rotate-180" />
-              <span>0800 721 277</span>
+            <div className="flex flex-col items-start gap-3 sm:gap-2 text-xl sm:text-xl md:text-lg lg:text-base text-white mb-3 sm:mb-2">
+              <a href="https://environment.go.ke/" target="_blank" rel="noopener noreferrer">
+                <span>Ministry of Environment, Climate Change and Forestry</span>
+              </a>
+              <a href="https://kenyaforestservice.org/" target="_blank" rel="noopener noreferrer">
+                <span>Kenya Forest Service</span>
+              </a>
+              <a href="https://www.kefri.org/home.html" target="_blank" rel="noopener noreferrer">
+                <span>KEFRI</span>
+              </a>
             </div>
-            <p className="text-xl sm:text-lg md:text-base lg:text-sm text-white/80 mb-4 sm:mb-3 md:mb-2">
-              Toll Free Number (For Anticorruption and Complaints)
-            </p>
-            <div className="flex justify-start lg:py-4">
-              <button className="bg-[#1f5d2f] text-white py-2 sm:py-1.5 md:py-1 px-4 sm:px-3 md:px-2  text-2xl sm:text-lg md:text-2xl lg:text-2xl font-medium hover:bg-white hover:text-[#0D3C00] transition-all duration-300 shadow-md hover:shadow-lg">
-                Call Now
-              </button>
-            </div>
+            
           </div>
 
           {/* Column 4: Subscribe */}
           <div className="p-6 sm:p-4 md:p-3">
             <h3 className="text-3xl sm:text-2xl md:text-xl lg:text-lg  font-bold text-white mb-4 sm:mb-3 md:mb-2">
             <p className=" font-bold text-[#fff] leading-[1.8] text-[1.2rem] mb-2">
-              Subscribe to The Forester Magazine
+              Subscribe to The College Magazine
               </p>
             </h3>
             <div className="flex flex-col gap-4 sm:gap-3 md:gap-2">
