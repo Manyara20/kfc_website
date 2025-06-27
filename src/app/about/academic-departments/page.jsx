@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import MainNavBar from '@/components/MainNavBar';
 import FooterBottom from '@/components/FooterBottom';
@@ -29,7 +28,7 @@ const departments = [
     description: "This course offered by the College is designed to equip individuals with the competences…",
     image: "/kfc/facility/comp_lab.jpg",
     link: "/departments/business-management",
-  },
+  }, 
   {
     title: "Department of Information Communication and Technology",
     description: "The College offers diploma and certificate course in ICT Technician…",

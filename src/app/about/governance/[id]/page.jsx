@@ -1,12 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import { useParams } from "next/navigation";
+import Image from "next/image";
 import TopNavBar from "@/components/TopNavBar";
 import MainNavBar from "@/components/MainNavBar";
 import FooterBottom from "@/components/FooterBottom";
-import InfoIcon from "@mui/icons-material/Info";
 
+// Placeholder image for fallback
+const placeholderImage = "/icons/user.png"; // Updated to match KFCSeniorManagementPage
 
+// Management details mapping
 const managementDetails = {
   principal: {
     image: "/kfc/management/musiyimi.jpg",
@@ -70,101 +73,66 @@ const managementDetails = {
   },
 };
 
-// Main Page Component
-export default function KFCSeniorManagementPage() {
-  // Extract Principal and other management members from managementDetails
-  const principal = {
-    id: "principal",
-    name: managementDetails.principal.name,
-    title: managementDetails.principal.title,
-    image: managementDetails.principal.image,
-  };
+const ManagementProfile = () => {
+  const params = useParams();
+  const { id } = params;
 
-  const managementMembers = Object.keys(managementDetails)
-    .filter((key) => key !== "principal")
-    .map((key) => ({
-      id: key,
-      name: managementDetails[key].name,
-      title: managementDetails[key].title,
-      image: managementDetails[key].image,
-    }));
-
-  return (
-    <div>
-    
-      <MainNavBar />
-      <div className="bg-white min-h-screen px-4 md:px-6 py-4">
-        {/* Title and Description */}
-        <div className="text-center mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 font-['Peugeot',Helvetica,sans-serif] capitalize tracking-tight">
-            Senior Management
-          </h1>
-          <p className="text-gray-600 text-sm md:text-base max-w-xl mx-auto font-['Peugeot',Helvetica,sans-serif]">
-            Meet the dedicated leaders of the Kenya Forestry College, committed to advancing forestry education and training.
+  // Ensure id is defined and exists in the managementDetails object
+  if (!id || !managementDetails[id]) {
+    return (
+      <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+        <div className="bg-white p-6 rounded-lg shadow-md border-2 border-gray-300">
+          <p className="text-gray-700 text-base font-['Peugeot',Helvetica,sans-serif]">
+            Profile not found
           </p>
         </div>
+      </div>
+    );
+  }
 
-        {/* Principal Section */}
-        <div className="flex justify-center mb-6">
-          <div className="bg-white rounded-lg shadow-md w-full sm:w-100 p-4 text-center transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <span className="inline-block bg-[#6A961F] text-white text-xs font-bold uppercase px-3 py-1 mb-2 font-['Peugeot',Helvetica,sans-serif]">
-              Principal
-            </span>
-            <img
-              className="w-72 h-72 rounded-full mx-auto mb-2 border-4 border-[#6A961F] shadow-sm object-fit"
-              alt={principal.name}
-              src={principal.image}
-            />
-            <h6 className="text-base font-semibold text-[#023011] mb-1 uppercase font-['Peugeot',Helvetica,sans-serif]">
-              {principal.name}
-            </h6>
-            <p className="text-gray-600 text-sm mb-2 capitalize font-['Peugeot',Helvetica,sans-serif]">
-              {principal.title}
-            </p>
-            <Link href={`/about/governance/${principal.id}`} passHref>
-              <button
-                className="text-[#6A961F] hover:bg-[#6A961F]/10 p-2 rounded-full transition-colors duration-200"
-                aria-label="View Profile"
-              > 
-                <InfoIcon fontSize="small" />
-              </button>
-            </Link>
-          </div>
-        </div>
+  const profile = managementDetails[id];
 
-        {/* Management Members Section */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {managementMembers.map((member, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-md p-4 text-center transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between"
-            >
-              <div>
-                <img
-                  className="w-84 h-84 rounded-full mx-auto mb-2 border-4 border-[#0D3C00] shadow-sm object-fit"
-                  alt={member.name}
-                  src={member.image}
-                />
-                <h6 className="text-base font-semibold text-[#023011] mb-1 uppercase font-['Peugeot',Helvetica,sans-serif]">
-                  {member.name}
-                </h6>
-                <p className="text-gray-600 text-sm mb-2 capitalize font-['Peugeot',Helvetica,sans-serif]">
-                  {member.title}
-                </p>
-              </div>
-              <Link href={`/about/governance/${member.id}`} passHref>
-                <button
-                  className="text-[#0D3C00] hover:bg-[#6A961F]/10 p-2 rounded-full transition-colors duration-200"
-                  aria-label="View Profile"
-                >
-                  <InfoIcon fontSize="small" />
-                </button>
-              </Link>
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <TopNavBar />
+      <MainNavBar />
+      <div className="flex-grow flex items-center justify-center p-4 md:p-6">
+        <div className="bg-white shadow-lg rounded-lg border-2 border-[#6A961F] w-full max-w-2xl p-6 md:p-8">
+          <div className="flex flex-col items-center">
+            <div className="relative w-48 h-48 mb-4">
+              <Image
+                src={profile.image}
+                alt={profile.name}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full border-4 border-[#6A961F] shadow-sm"
+                onError={(e) => (e.target.src = placeholderImage)}
+              />
             </div>
-          ))}
+            <h1
+              className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 text-center uppercase"
+              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+            >
+              {profile.name}
+            </h1>
+            <h2
+              className="text-lg md:text-xl text-gray-600 mb-4 text-center capitalize"
+              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+            >
+              {profile.title}
+            </h2>
+            <p
+              className="text-gray-700 text-sm md:text-base leading-relaxed text-center"
+              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+            >
+              {profile.bio || "No biography available."}
+            </p>
+          </div>
         </div>
       </div>
       <FooterBottom />
     </div>
   );
-}
+};
+
+export default ManagementProfile;
