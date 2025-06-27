@@ -96,4 +96,4 @@ const AcademicDepartment = () => {
   );
 };
 
-export default AcademicDepartment;
+export default AcademicDepartment; 
