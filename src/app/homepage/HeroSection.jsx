@@ -14,49 +14,49 @@ const HeroSection = () => {
         "Quality Training for changing Climate",
       image: "/kfc/hero/Hero1.jpg",
       ctaText: "Read More",
-      ctaLink: "#",
+      ctaLink: "/about/history",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "#",
+      secondaryCtaLink: "/contacts",
     },
     {
       title: "Kenya Forestry College",
       subtitle:
-        "KFC Adminstation",
+        "We offer quaity training in courses ranging from forestry to information technology...",
       image: "/kfc/hero/kfc_admin_block.jpg",
-      ctaText: "Read More",
-      ctaLink: "#",
+      ctaText: "Apply Now",
+      ctaLink: "/apply-now",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "#",
+      secondaryCtaLink: "/contacts",
     },
     {
       title: "Kenya Forestry College",
       subtitle:
-        "Sawmill",
+        "Master the art and science of wood processing in our state-of-the-art sawmill. We train skilled technicians for a thriving and responsible timber industry",
       image: "/kfc/hero/students_sawmill.jpg",
-      ctaText: "Read More",
-      ctaLink: "#",
+      ctaText: "Apply Now",
+      ctaLink: "/admission/apply-now",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "#",
+      secondaryCtaLink: "/contacts",
     },
     {
       title: "Kenya Forestry College",
       subtitle:
-        "Tree Nursery",
+        "From our nurseries to the nation's forests, we are at the forefront of Kenya's green revolution. Learn how we cultivate resilience and expertise from the ground up",
       image: "/kfc/hero/students_tree_nurssery.jpeg",
-      ctaText: "Read More",
-      ctaLink: "#",
+      ctaText: "View All Courses",
+      ctaLink: "/about/academic-departments",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "#",
+      secondaryCtaLink: "/contacts",
     },
     {
       title: "Kenya Forestry College",
       subtitle:
-        "Graduation Ceremony",
+        "Join a proud lineage of forestry professionals who are making a tangible impact on our environment. ",
       image: "/kfc/hero/graduands.jpg",
-      ctaText: "Read More",
-      ctaLink: "#",
+      ctaText: "Join Us Now",
+      ctaLink: "/admission/apply-now",
       secondaryCtaText: "Get In Touch",
-      secondaryCtaLink: "#",
+      secondaryCtaLink: "/contacts",
     },
     
   ];
@@ -94,9 +94,9 @@ const HeroSection = () => {
         </div>
 
         {/* Text Content and CTA Buttons */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center z-10 p-4 sm:p-6 md:p-8 lg:p-10 w-full max-w-6xl">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center z-10 p-4 sm:p-8 md:p-10 lg:p-12 w-full max-w-6xl">
           <h1
-            className="font-bold mb-3 sm:mb-8 md:mb-10 tracking-wider text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+            className="font-bold mb-3 sm:mb-8 md:mb-10 tracking-wider text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
             style={{
               textShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)",
             }}
@@ -104,7 +104,7 @@ const HeroSection = () => {
             {slides[currentSlide].title}
           </h1>
           <p
-            className="mb-4 sm:mb-10 md:mb-10  text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl" //italic
+            className="mb-6 sm:mb-12 md:mb-14  text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl" //italic
             style={{
               textShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
             }}

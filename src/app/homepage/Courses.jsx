@@ -19,7 +19,7 @@ const Courses = () => {
 
       {/* Tagline */}
       <h1 className="text-2xl sm:text-4xl font-extrabold text-center uppercase mb-4 px-4">
-        Apply a for training program
+        Apply for a training program
       </h1>
 
       {/* Apply Now Button */}

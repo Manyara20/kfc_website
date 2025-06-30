@@ -81,7 +81,7 @@ const CoreCourses = () => {
                 </p>
                 <div className="mt-auto">
                   <a
-                    href="/courses" // Placeholder link, update with actual URL
+                    href="/about/academic-departments" // Placeholder link, update with actual URL
                     className="inline-block bg-[#fe7c02] text-white font-semibold py-2 px-4  hover:bg-green-700 transition-colors duration-300"
                   >
                     View All

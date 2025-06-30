@@ -150,7 +150,7 @@ const History = () => {
                 className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem]"
                 style={{ fontSize: `${fontSize * 0.9}px` }}
               >
-                To train highly qualified technical manpower for sustainable management and utilization of forests and allied natural resources for environmental listy and socio-economic development.
+                To train highly qualified technical manpower for sustainable management and utilization of forests and allied natural resources for environmental stability and socio-economic development.
               </p>
             </div>
           </div>

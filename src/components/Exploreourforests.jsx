@@ -35,7 +35,7 @@ const forests = [
     image: "/kfc/facility/hostel.jpg",
     subtitle:
       "The college has 2 modern hostels with a capacity of 256 complemented...",
-    href: "/forests/hostels",
+    href: "/facilities/hostels",
   },
   {
     name: "Kenya Forestry College Library",
