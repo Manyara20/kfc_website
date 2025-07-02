@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaWheelchair, FaEnvelope, FaIdBadge, FaTree } from "react-icons/fa";
+import { FaWheelchair, FaEnvelope, } from "react-icons/fa";
 
 const FloatingSidebar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,22 +126,7 @@ const FloatingSidebar = () => {
         >
           <FaEnvelope className="text-white animate-colorTransition" />
         </Link>
-        <Link
-          href="https://enursery.kenyaforestservice.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-transparent border border-white w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex justify-center items-center text-lg sm:text-xl md:text-2xl transition-all duration-300 hover:bg-[#2a7a3d]"
-        >
-          <FaIdBadge className="text-white animate-colorTransition" />
-        </Link>
-        <Link
-          href="https://sawmillers.kenyaforestservice.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-transparent border border-white w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 flex justify-center items-center text-lg sm:text-xl md:text-2xl transition-all duration-300 hover:bg-[#2a7a3d]"
-        >
-          <FaTree className="text-white animate-colorTransition" />
-        </Link>
+        
       </div>
     </>
   );
