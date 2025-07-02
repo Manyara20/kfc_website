@@ -10,7 +10,7 @@ const principles = [
     description:
       "Development and dissemination of best practices in natural resources management through quality teaching, research and outreach.",
     icon: "/icons/ecosystem.png",
-    background: "/kfc/hero/hero.jpg",
+    background: "/kfc/hero/Hero1.jpg",
   },
   {
     id: "public-good",
