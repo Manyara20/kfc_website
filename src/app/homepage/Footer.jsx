@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Column 1: Logo, Tagline */}
           <div className="p-6 sm:p-4 md:p-3 flex flex-col items-start">
             <Image
-                    src="/images/kfs_logo.png"
+                    src="/kfc/kfc_logo100x100.png"
                     alt="Logo"
                     width={64}
                     height={64}
@@ -48,7 +48,7 @@ const Footer = () => {
                 />
             
             <p className="text-2xl sm:text-lg md:text-base lg:text-sm text-white/80 mb-6 sm:mb-4 md:mb-3 font-light italic">
-              To be an internationally recognized organisation for excellence in knowledge-based sustainable forest resources management and conservation.
+              To be an internationally recognized institution for excellence in knowledge-based sustainable forestry training in management and conservation.
             </p>
           </div>
 
@@ -62,11 +62,11 @@ const Footer = () => {
             <div className="grid grid-cols-1 gap-3 sm:gap-2 text-white/80">
               <p className="text-xl sm:text-lg md:text-base lg:text-sm py-1 flex items-center gap-2">
                 <FaEnvelope className="text-white" />
-                info@kenyaforestservice.org
+                college@kenyaforestservice.org
               </p>
               <p className="text-xl sm:text-lg md:text-base lg:text-sm py-1 flex items-center gap-2">
                 <FaMapMarkerAlt className="text-white" />
-                P.O BOX 30513 - 00100 NAIROBI - KENYA
+                P.O BOX 8-20203 LONDIANI - KENYA
               </p>
               <p className="text-xl sm:text-lg md:text-base lg:text-sm py-1 flex items-center gap-2">
                 <FaClock className="text-white" />

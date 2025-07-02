@@ -6,7 +6,7 @@ import About from "@/app/homepage/About";
 import NewsSection from "@/app/homepage/NewsSection";
 import Footer from "@/app/homepage/Footer";
 import Courses from "@/app/homepage/Courses";
-import Counter from "@/app/homepage/Counter";
+//import Counter from "@/app/homepage/Counter";
 import Mission from "@/app/homepage/Mission";
 import CoreCourses from "@/app/homepage/CoreCourses"
 import PatnersSection from "@/app/homepage/Patners";
@@ -21,9 +21,8 @@ function HomePageContents() {
       <HeroSection />
       <About />
       <Mission />
-      <Courses />
       <CoreCourses />
-      <Counter />
+      <Courses />
       <Exploreourforests/>
       <PatnersSection />
       <NewsSection />

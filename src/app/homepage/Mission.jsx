@@ -10,7 +10,7 @@ const principles = [
     description:
       "Development and dissemination of best practices in natural resources management through quality teaching, research and outreach.",
     icon: "/icons/ecosystem.png",
-    background: "/images/uniform.jpg",
+    background: "/kfc/hero/hero.jpg",
   },
   {
     id: "public-good",
@@ -18,7 +18,7 @@ const principles = [
     description:
       "A Model Educational Centre of excellence for forestry, environment and allied natural resources.",
     icon: "/icons/public-relation.png",
-    background: "/images/MangroveboatinGazi.jpg",
+    background: "/kfc/facility/comp_lab.jpg",
   },
   {
     id: "sustainable",
@@ -26,7 +26,7 @@ const principles = [
     description:
       "The College is mandated to provide quality training, education for sustainable management and utilization of forests and allied natural resources.",
     icon: "/icons/conservation.png",
-    background: "/images/plant_tree.jpg",
+    background: "/kfc/hero/graduands.jpg",
   },
   {
     id: "values",
@@ -34,7 +34,7 @@ const principles = [
     description:
       "Teamwork, Critical thinking, Continuous learning culture, Excellence, Integrity, Scientific principles and professionalism, Creativity and Innovation",
     icon: "/icons/conservation.png",
-    background: "/images/plant_tree.jpg",
+    background: "/kfc/Hospitality.jpg",
   },
 ];
 

@@ -1,233 +1,172 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import MainNavBar from '@/components/MainNavBar';
-import FooterBottom from '@/components/FooterBottom';
-import Image from 'next/image';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Link from "next/link";
+import TopNavBar from "@/components/TopNavBar";
+import MainNavBar from "@/components/MainNavBar";
+import FooterBottom from "@/components/FooterBottom";
+import InfoIcon from "@mui/icons-material/Info";
 
-const History = () => {
-  const [fontSize, setFontSize] = useState(16);
-  const [isVisible, setIsVisible] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true); // Ensure carousel renders client-side
-    setIsVisible(true);
-  }, []);
+const managementDetails = {
+  principal: {
+    image: "/kfc/management/musiyimi.jpg",
+    name: "Mr. Francis Musyimi",
+    title: "Principal",
+    bio: "The Principal is the chief executive officer of the college responsible for providing strategic leadership, institutional management, and overall administration. The principal ensures the implementation of training policies, academic excellence, financial accountability, and stakeholder engagement.",
+  },
+  "deputy-principal": {
+    image: "/kfc/management/owuor.jpg",
+    name: "Mr. John O. Owuor",
+    title: "Deputy Principal",
+    bio: "The Deputy Principal is the second-in-command and assists the Principal in managing academic affairs, research programs, student services, and daily operations. The deputy often oversees curriculum implementation, staff coordination, and quality assurance.",
+  },
+  "chief-administrative-officer": {
+    image: "/kfc/management/chebii.jpg",
+    name: "Andrew O. Ogwang",
+    title: "Chief Administrative Officer",
+    bio: "The Chief Administrative Officer is in charge of the college’s non-academic operations, including administration, procurement, budgeting, human resource management, asset management, and infrastructure. The CAO ensures effective support systems are in place for smooth college functioning.",
+  },
+  "academic-officer": {
+    image: "/icons/user.png ",
+    name: "Mr. Micah Chebii",
+    title: "Academic Officer",
+    bio: "The Academic Officer oversees the implementation of academic programs, monitors teaching standards, supports curriculum development, and ensures compliance with training objectives. The officer works closely with teaching staff and the Examination Officer to maintain academic quality.",
+  },
+  "examination-officer": {
+    image: "/icons/user.png",
+    name: "Mr. Robert Nyaringo",
+    title: "Examination Officer",
+    bio: "The Examination Officer is responsible for the planning, coordination, and management of all examinations in the college. Duties include scheduling, invigilation, processing of results, certification, and maintaining exam integrity and recordkeeping.",
+  },
+  "industrial-liaison-officer": {
+    image: "/kfc/management/ojwang.jpg",
+    name: "Charles Ochieng",
+    title: "Industrial Liaison Officer",
+    bio: "The Industrial Liaison Officer facilitates and coordinates student industrial attachments (field placements). This officer connects the college with forestry industry partners, secures placement opportunities, monitors student progress, and integrates field experience into the academic curriculum.",
+  },
+  
+  "dean-of-students": {
+    image: "/icons/user.png ",
+    name: "Margret Openo",
+    title: "Dean of Students",
+    bio: "The Dean of Students is in charge of student welfare and support services. This includes overseeing discipline, accommodation, health services, counseling, extracurricular activities, and fostering a supportive campus environment for personal and academic growth.",
+  },
+  "accountant": {
+    image: "/kfc/management/josphine.jpg",
+    name: "Josephine Njoroge",
+    title: "Accountant",
+    bio: "An Accountant is responsible for managing the college's financial records, ensuring compliance with government financial regulations, and preparing financial reports. The accountant oversees budgeting, payroll, payment processing, reconciliation of accounts, and financial audits.",
+  },
+  "forester-masaita-block": {
+    image: "/kfc/management/aluda.jpg",
+    name: "Mr. Rickson Aluda",
+    title: "Forester – Masaita Block",
+    bio: "The Forester – Masaita Block is responsible for managing the field training area (Masaita block). This officer supervises practical student training in forestry operations, including tree nursery management, silviculture, plantation establishment, and environmental conservation.",
+  },
+  "procurement-officer": {
+    image: "/kfc/management/openo.jpg", //kirotich photo
+    name: "Gladys Kirotich",
+    title: "Procurement Officer",
+    bio: "A Procurement Officer at Kenya Forestry College is responsible for planning, sourcing, purchasing, and managing goods and services required by the institution, in compliance with the Public Procurement and Asset Disposal Act.",
+  },
+  
+};
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+// Main Page Component
+export default function KFCSeniorManagementPage() {
+  // Extract Principal and other management members from managementDetails
+  const principal = {
+    id: "principal",
+    name: managementDetails.principal.name,
+    title: managementDetails.principal.title,
+    image: managementDetails.principal.image,
   };
 
-  if (!isMounted) {
-    return null; // Prevent SSR issues with carousel
-  }
+  const managementMembers = Object.keys(managementDetails)
+    .filter((key) => key !== "principal")
+    .map((key) => ({
+      id: key,
+      name: managementDetails[key].name,
+      title: managementDetails[key].title,
+      image: managementDetails[key].image,
+    }));
 
   return (
     <div>
+    
       <MainNavBar />
-      {/* Hero */}
-      <div
-        className="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/kfc/hero/Hero1.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-opacity-60" />
-        <div className="relative z-10 text-center text-green-600 px-6 max-w-4xl">
-          <h1
-            className="font-['Peugeot',Helvetica,sans-serif] font-bold text-white text-[2.2rem] sm:text-[3rem] leading-[1.3] tracking-[0.5px] capitalize"
-            style={{ fontSize: `${fontSize * 2}px` }}
-          >
-            About Kenya Forestry College
+      <div className="bg-white min-h-screen px-4 md:px-6 py-4">
+        {/* Title and Description */}
+        <div className="text-center mb-6">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 font-['Peugeot',Helvetica,sans-serif] capitalize tracking-tight">
+            College Management
           </h1>
-          <p
-            className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
-            style={{ fontSize: `${fontSize * 0.9}px` }}
-          >
-            A premier institution for forestry education and training.
+          <p className="text-gray-600 text-sm md:text-base max-w-xl mx-auto font-['Peugeot',Helvetica,sans-serif]">
+            Meet the dedicated leaders of the Kenya Forestry College, committed to advancing forestry education and training.
           </p>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div
-        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
-      >
-        <div
-          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
-          style={{
-            backgroundImage: `url('/kfc/hero/Hero1.jpg')`,
-          }}
-        ></div>
-
-        {/* Main Section */}
-        <motion.div
-          initial="hidden"
-          animate={isVisible ? 'visible' : 'hidden'}
-          variants={cardVariants}
-          className="bg-white/95 p-6 sm:p-8 md:p-10 max-w-5xl w-full relative z-10 border border-white/30 shadow-lg"
-        >
-          <div className="flex flex-col md:flex-row gap-6 p-6">
-            {/* Text */}
-            <div className="md:w-1/2">
-              <h2
-                className="font-['Peugeot',Helvetica,sans-serif] font-bold text-[#0f5a28] drop-shadow-[1px_1px_2px_rgba(0,0,0,0.1)] mb-4 text-[1.8rem] sm:text-[2.2rem] leading-[1.3] tracking-[0.5px] capitalize"
-                style={{ fontSize: `${fontSize * 1.5}px` }}
-              >
-                About Kenya Forestry College
-              </h2>
-              <p
-                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem] mb-4"
-                style={{ fontSize: `${fontSize * 0.9}px` }}
-              >
-                KFC is a technical training institution legally established through section 17 of the Forest Conservation and Management Act (FCMA) of 2016. It is the entity that promotes forestry education and training by/within the Kenya Forest Service.
-              </p>
-              <p
-                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem] mb-4"
-                style={{ fontSize: `${fontSize * 0.9}px` }}
-              >
-                The College is duly registered with both the Technical and Vocational Education and Training Authority (TVETA), National Industrial Training Authority (NITA), and the Kenya Universities and Colleges Central Placement Service (KUCCPS). Kenya Forestry College’s vision is to be an international centre of excellence for applied education in sustainable management of forestry and allied resources.
-              </p>
-            </div>
-            {/* Image */}
-            <div className="md:w-1/2">
-              <Image
-                src="/kfc/hero/Hero1.jpg"
-                alt="Kenya Forestry College"
-                width={600}
-                height={400}
-                className="w-full h-64 md:h-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Mission, Vision, Mandate Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-            <div className="bg-white p-6 rounded-lg shadow-md border border-[#fe7c02]">
-              <h3
-                className="font-['Peugeot',Helvetica,sans-serif] font-semibold text-[#fe7c02] mb-2"
-                style={{ fontSize: `${fontSize * 1.1}px` }}
-              >
-                Our Mission
-              </h3>
-              <p
-                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem]"
-                style={{ fontSize: `${fontSize * 0.9}px` }}
-              >
-                To promote best practices in the management of forests and allied resources through quality training, innovation, and outreach.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-[#fe7c02]">
-              <h3
-                className="font-['Peugeot',Helvetica,sans-serif] font-semibold text-[#fe7c02] mb-2"
-                style={{ fontSize: `${fontSize * 1.1}px` }}
-              >
-                Our Vision
-              </h3>
-              <p
-                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem]"
-                style={{ fontSize: `${fontSize * 0.9}px` }}
-              >
-                To be an international centre of excellence for technical training in sustainable management of forests and allied resources.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md border border-[#fe7c02]">
-              <h3
-                className="font-['Peugeot',Helvetica,sans-serif] font-semibold text-[#fe7c02] mb-2"
-                style={{ fontSize: `${fontSize * 1.1}px` }}
-              >
-                Mandate
-              </h3>
-              <p
-                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem]"
-                style={{ fontSize: `${fontSize * 0.9}px` }}
-              >
-                To train highly qualified technical manpower for sustainable management and utilization of forests and allied natural resources for environmental listy and socio-economic development.
-              </p>
-            </div>
-          </div>
-
-          {/* Carousel Photo Gallery */}
-          <div className="mt-8">
-            <h3
-              className="font-['Peugeot',Helvetica,sans-serif] font-semibold text-[#0f5a28] mb-4"
-              style={{ fontSize: `${fontSize * 1.2}px` }}
-            >
-              College Photo Gallery
-            </h3>
-            <Carousel
-              showThumbs={false}
-              showStatus={false}
-              infiniteLoop
-              autoPlay
-              interval={5000}
-              className="overflow-hidden"
-            >
-              {[
-                {
-                  src: '/kfc/hero/Hero1.jpg',
-                  alt: 'College Campus',
-                  caption: 'Kenya Forestry College Campus',
-                },
-                {
-                  src: '/kfc/hero/Hero1.jpg',
-                  alt: 'College Building',
-                  caption: 'Main College Building',
-                },
-                {
-                  src: '/kfc/hero/Hero1.jpg',
-                  alt: 'College Grounds',
-                  caption: 'College Grounds',
-                },
-              ].map((image, i) => (
-                <div key={i} className="relative">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={800}
-                    height={600}
-                    className="w-full h-64 md:h-96 object-cover"
-                  />
-                  <p
-                    className="absolute  bottom-0 left-0 bg-black bg-opacity-50 text-white p-2 font-['Peugeot',Helvetica,sans-serif] text-[0.8rem]"
-                    style={{ fontSize: `${fontSize * 0.8}px` }}
-                  >
-                    {image.caption}
-                  </p>
-                </div>
-              ))}
-            </Carousel>
-          </div>
-
-          {/* College Map */}
-          <div className="mt-8">
-            <h3
-              className="font-['Peugeot',Helvetica,sans-serif] font-semibold text-[#0f5a28] mb-4"
-              style={{ fontSize: `${fontSize * 1.2}px` }}
-            >
-              College Map
-            </h3>
-            <Image
-              src="/kfc/hero/Hero1.jpg"
-              alt="Kenya Forestry College Map"
-              width={800}
-              height={600}
-              className="w-full h-64 ascended md:h-96 object-contain"
+        {/* Principal Section */}
+        <div className="flex justify-center mb-6">
+          <div className="bg-white rounded-lg shadow-md w-full sm:w-100 p-4 text-center transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <span className="inline-block bg-[#6A961F] text-white text-xs font-bold uppercase px-3 py-1 mb-2 font-['Peugeot',Helvetica,sans-serif]">
+              Principal
+            </span>
+            <img
+              className="w-72 h-72 rounded-full mx-auto mb-2 border-4 border-[#6A961F] shadow-sm object-fit"
+              alt={principal.name}
+              src={principal.image}
             />
+            <h6 className="text-base font-semibold text-[#023011] mb-1 uppercase font-['Peugeot',Helvetica,sans-serif]">
+              {principal.name}
+            </h6>
+            <p className="text-gray-600 text-sm mb-2 capitalize font-['Peugeot',Helvetica,sans-serif]">
+              {principal.title}
+            </p>
+            <Link href={`/about/governance/${principal.id}`} passHref>
+              <button
+                className="text-[#6A961F] hover:bg-[#6A961F]/10 p-2 rounded-full transition-colors duration-200"
+                aria-label="View Profile"
+              > 
+                <InfoIcon fontSize="small" />
+              </button>
+            </Link>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Management Members Section */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {managementMembers.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-4 text-center transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col justify-between"
+            >
+              <div>
+                <img
+                  className="w-84 h-84 rounded-full mx-auto mb-2 border-4 border-[#0D3C00] shadow-sm object-fit"
+                  alt={member.name}
+                  src={member.image}
+                />
+                <h6 className="text-base font-semibold text-[#023011] mb-1 uppercase font-['Peugeot',Helvetica,sans-serif]">
+                  {member.name}
+                </h6>
+                <p className="text-gray-600 text-sm mb-2 capitalize font-['Peugeot',Helvetica,sans-serif]">
+                  {member.title}
+                </p>
+              </div>
+              <Link href={`/about/governance/${member.id}`} passHref>
+                <button
+                  className="text-[#0D3C00] hover:bg-[#6A961F]/10 p-2 rounded-full transition-colors duration-200"
+                  aria-label="View Profile"
+                >
+                  <InfoIcon fontSize="small" />
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
       <FooterBottom />
     </div>
   );
-};
-
-export default History;
+}
