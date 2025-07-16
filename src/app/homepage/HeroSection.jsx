@@ -11,7 +11,7 @@ const HeroSection = () => {
     {
       title: "Kenya Forestry College",
       subtitle:
-        "Quality Training for changing Climate",
+        "Quality Training for a Changing Climate",
       image: "/kfc/hero/Hero1.jpg",
       ctaText: "Read More",
       ctaLink: "/about/history",
