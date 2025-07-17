@@ -47,9 +47,9 @@ const EnvironmentalManagement = () => {
             className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
             style={{ fontSize: `${fontSize * 0.9}px` }}
           >
-            The Kenya Forestry College offers a Diploma in Environmental Management, a comprehensive program designed to equip individuals with the technical knowledge and practical skills necessary for promoting and implementing sustainable environmental practices. This competency-based course prepares graduates to serve effectively as Environmental Technicians, with training in the following key areas;
-Environmental disaster and risk management, Water resource management, Environmental waste management, Marine and wetland resource management, Rangeland and wildlife resource management, Energy resource management, Forest resource management, Enforcement of environmental laws and regulations, Greenhouse management and climate change mitigation
-The diploma course is tailored to meet current environmental challenges and aligns with national and global sustainability goals, ensuring that graduates are well prepared to contribute meaningfully to environmental conservation and natural resource management.
+            A comprehensive program designed to equip individuals with the technical knowledge and practical skills necessary for
+             promoting and implementing sustainable environmental practices. 
+            
             </p>
         </div>
       </div>
@@ -104,7 +104,12 @@ The diploma course is tailored to meet current environmental challenges and alig
                 className="font-['Peugeot',Helvetica,sans-serif] font-normal text-black leading-[1.8] text-[0.9rem]"
                 style={{ fontSize: `${fontSize * 0.9}px` }}
               >
-                Kenya Forestry College offers both certificate and diploma courses in environmental management that are designed to equip an individual with competencies for sustainable environmental practices. The qualifications consist of competencies that an individual must achieve to propagate tree germplasm, manage tree nursery, implement forest silvicultural operations, manage forest ecosystems, conduct forest inventory and valuation, manage forest engineering operations, manage pests and diseases, manage forest harvesting and logging, undertake wood utilisation and processing, conduct forest extension and agroforestry, enforce forest law and policy, conduct forest land survey and mapping, and manage forest fires.
+                The Kenya Forestry College offers a Diploma in Environmental Management, a comprehensive program designed to equip individuals with the technical knowledge and practical skills necessary for promoting and implementing sustainable environmental practices. 
+            This competency-based course prepares graduates to serve effectively as Environmental Technicians, with training in the following key areas;
+            Environmental disaster and risk management, Water resource management, Environmental waste management, Marine and wetland resource management, 
+            Rangeland and wildlife resource management, Energy resource management, Forest resource management, Enforcement of environmental laws and regulations, Greenhouse management and climate change mitigation
+            The diploma course is tailored to meet current environmental challenges and aligns with national and global sustainability goals, ensuring 
+            that graduates are well prepared to contribute meaningfully to environmental conservation and natural resource management.
               </p>
             </div>
           </div>

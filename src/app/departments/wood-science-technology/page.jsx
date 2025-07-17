@@ -77,7 +77,7 @@ const EnvironmentalManagement = () => {
             {/* Image */}
             <div className="md:w-1/2">
               <Image
-                src="/kfc/images/wanyonyi.jpg"
+                src="/kfc/images/wanyonyi.png"
                 alt="Mr. Micheal Wanyonyi"
                 width={500}
                 height={300}

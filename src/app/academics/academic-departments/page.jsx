@@ -39,7 +39,7 @@ const departments = [
   {
     title: "Department of Protection and Security",
     description: "The College offers Diploma course in Environmental Management which prepares students to balance forestry with biodiversity.",
-    image: "/kfc/protetction.jpg",
+    image: "/kfc/images/mwan.jpeg",
     link: "/departments/protection-security",
   },
 ];

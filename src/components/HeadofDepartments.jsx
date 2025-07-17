@@ -20,7 +20,7 @@ const headsOfDepartments = [
   {
     name: 'Mr. Micheal Wanyonyi',
     department: 'Department of Wood Science and Technology',
-    image: '/kfc/images/wanyonyi.jpg',
+    image: '/kfc/images/wanyonyi.png',
     href: '/departments/wood-science-technology',
   },
   {
@@ -34,6 +34,12 @@ const headsOfDepartments = [
     department: 'Department of Business Management',
     image: '/kfc/images/ochieng.png',
     href: '/departments/business-management',
+  },
+  {
+    name: 'Mr. Appolinary Mwandigha',
+    department: 'Department of Forest Protection and Security',
+    image: '/kfc/images/mwan.jpeg',
+    href: '/departments/protection-security',
   },
 ];
 
@@ -73,7 +79,7 @@ const HeadOfDepartments = () => {
                 variants={cardVariants}
                 initial="initial"
                 animate="animate"
-                className="relative h-96 overflow-hidden shadow-xl bg-white flex flex-col"
+                className="relative h-120 overflow-hidden shadow-xl bg-white flex flex-col"
                _batches
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               >
@@ -81,8 +87,8 @@ const HeadOfDepartments = () => {
                   src={hod.image}
                   alt={hod.name}
                   width={400}
-                  height={240}
-                  className="w-full h-[240px] object-cover transition-transform duration-500"
+                  height={300}
+                  className="w-full h-[360px] object-fit transition-transform duration-500"
                   unoptimized
                 />
                 <div className="p-4 flex flex-col justify-between flex-grow">

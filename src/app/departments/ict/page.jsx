@@ -130,7 +130,7 @@ const ICT = () => {
                   {[
                     { sno: 1, programme: 'Diploma in Information Communication Technology (ICT)', authority: 'TVET CDACC', requirements: 'KCSE Mean Grade C- (Minus)', duration: '2 Years' },
                     { sno: 2, programme: 'Certificate in Information Communication Technology (ICT)', authority: 'TVET CDACC', requirements: 'KCSE Mean Grade D (Plain)', duration: '1 Year' },
-                    { sno: 3, programme: 'Basic Computer Applications', authority: 'NITA', requirements: 'KCSE Mean Grade D (Plain)', duration: '8 Weeks' },
+                    { sno: 3, programme: 'Computer Applications', authority: 'TVET CDACC', requirements: 'KCSE Mean Grade D (Plain)', duration: '3 months' },
                     
                   ].map((course) => (
                     <tr key={course.sno} className="even:bg-gray-100">

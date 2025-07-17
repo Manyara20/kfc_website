@@ -22,7 +22,7 @@ const About = () => {
               The College is duly registered with both the Technical and Vocational Education and Training Authority (TVETA), National Industrial Training Authority (NITA) and the Kenya Universities and Colleges Central Placement Service (KUCCPS). Kenya Forestry College’s vision is to be an international centre of excellence for applied education in sustainable management of forestry and allied resources.
             </p>
             <div className="flex justify-center mt-6">
-              <Link href="/about/learnmore">
+              <Link href="/about/history" className="text-center">
                 <button className="text-white border border-white bg-[#fe7c02] hover:bg-[#0D3C00] hover:text-white px-4 py-2 transition-colors duration-300 mt-4 border-radius-0">
                   Learn More
                 </button>
