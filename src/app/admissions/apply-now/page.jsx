@@ -1,102 +1,132 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
+import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import MainNavBar from '@/components/MainNavBar';
 import FooterBottom from '@/components/FooterBottom';
 
-const forests = [
-  {
-    name: "Masaita Forest Block",
-    image: "/kfc/masaita/masaita.jpeg",
-    subtitle: "The forest has an area of 4,152ha and is part of the Mau complex",
-    href: "/facilities/masaita",
-  },
-  {
-    name: "Kenya Forestry College Hospitality Center",
-    image: "/kfc/facility/Hospitality.jpg",
-    subtitle: "The hospitality center offers conferencing…",
-    href: "/facilities/kfc-guesthouse-conference-centre",
-  },
-  {
-    name: "Computer Lab",
-    image: "/kfc/facility/comp_lab.jpg",
-    subtitle:
-      "Our state-of-the-art computer lab at Kenya Forestry College is equipped with 40 modern workstations",
-    href: "/facilities/comp_lab",
-  },
-  {
-    name: "Tree Nurseries",
-    image: "/kfc/nursery/nurseryb.jpeg",
-    subtitle:
-      "Masaita station has two nurseries, one within the college for students training…",
-    href: "/facilities/nursery",
-  },
-  {
-    name: "Hostels",
-    image: "/kfc/facility/hostel.jpg",
-    subtitle:
-      "The college has 2 modern hostels with a capacity of 256 complemented...",
-    href: "/facilities/hostels",
-  },
-  {
-    name: "Kenya Forestry College Library",
-    image: "/kfc/facility/lib.jpg",
-    subtitle: "Library is more than a repository of books…",
-    href: "/facilities/library",
-  },
-];
+const Apply = () => {
+  const [fontSize, setFontSize] = useState(16);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-const ForestCardGrid = () => {
+  useEffect(() => {
+    setIsMounted(true);
+    setIsVisible(true);
+  }, []);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+  };
+
+  if (!isMounted) {
+    return null;
+  }
+
   return (
-    <>
-   <MainNavBar />
-    <section className="py-12 px-4 sm:px-6 bg-gray-100">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-gray-800 mb-8">
-          Our Facilities
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {forests.map((forest, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg  overflow-hidden flex flex-col"
-            >
-              {/* Forest Image */}
-              <div className="relative w-full h-64">
-                <Image
-                  src={forest.image}
-                  alt={forest.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
-                />
-              </div>
-              {/* Forest Content */}
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                  {forest.name}
-                </h3>
-                <p className="text-sm text-gray-600 mb-4 flex-grow">
-                  {forest.subtitle}
-                </p>
-                <div className="mt-auto">
-                  <Link
-                    href={forest.href}
-                    className="inline-block bg-[#fe7c02] text-white font-semibold py-2 px-4  hover:bg-green-700 transition-colors duration-300"
-                  >
-                    ...More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+    <div>
+      <MainNavBar />
+      {/* Hero */}
+      <div
+        className="relative h-[40vh] bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/kfc/hero/Hero1.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-opacity-60" />
+        <div className="relative z-10 text-center text-green-600 px-6 max-w-7xl">
+          <h1
+            className="font-['Peugeot',Helvetica,sans-serif] font-bold text-white text-[2.2rem] sm:text-[3rem] leading-[1.3] tracking-[0.5px] capitalize"
+            style={{ fontSize: `${fontSize * 2}px` }}
+          >
+            Apply to Kenya Forestry College
+          </h1>
+          <p
+            className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
+            style={{ fontSize: `${fontSize * 0.9}px` }}
+          >
+            Join our premier institution for forestry education and training.
+          </p>
         </div>
       </div>
-    </section>
-    <FooterBottom />
-     </>
+
+      {/* Main Content */}
+      <div
+        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
+        }}
+      >
+        <div
+          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
+          style={{
+            backgroundImage: `url('/kfc/clas_lab.jpg')`,
+          }}
+        ></div>
+
+        {/* Application Section */}
+        <motion.div
+          initial="hidden"
+          animate={isVisible ? 'visible' : 'hidden'}
+          variants={cardVariants}
+          className="bg-white/95 p-6 sm:p-8 md:p-10 max-w-7xl w-full relative z-10 border border-white/30 shadow-lg"
+        >
+          <div className="flex flex-col md:flex-row gap-6 p-6">
+            {/* Left Column */}
+            <div className="md:w-1/2">
+              <h2
+                className="font-['Peugeot',Helvetica,sans-serif] font-bold text-[#0f5a28] drop-shadow-[1px_1px_2px_rgba(0,0,0,0.1)] mb-4 text-[1.8rem] sm:text-[2.2rem] leading-[1.3] tracking-[0.5px] capitalize"
+                style={{ fontSize: `${fontSize * 1.5}px` }}
+              >
+                Apply via KUCCPS
+              </h2>
+              <p
+                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem] mb-4"
+                style={{ fontSize: `${fontSize * 0.9}px` }}
+              >
+                Apply to Kenya Forestry College through the Kenya Universities and Colleges Central Placement Service (KUCCPS) for a seamless application process.
+              </p>
+              <a
+                href="https://students.kuccps.net/institutions/3880/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#fe7c02] text-white font-['Peugeot',Helvetica,sans-serif] font-semibold py-2 px-4 rounded hover:bg-[#e66b02] transition-colors"
+                style={{ fontSize: `${fontSize * 0.9}px` }}
+              >
+                Apply Now
+              </a>
+            </div>
+            {/* Right Column */}
+            <div className="md:w-1/2">
+              <h2
+                className="font-['Peugeot',Helvetica,sans-serif] font-bold text-[#0f5a28] drop-shadow-[1px_1px_2px_rgba(0,0,0,0.1)] mb-4 text-[1.8rem] sm:text-[2.2rem] leading-[1.3] tracking-[0.5px] capitalize"
+                style={{ fontSize: `${fontSize * 1.5}px` }}
+              >
+                Apply Directly
+              </h2>
+              <p
+                className="font-['Peugeot',Helvetica,sans-serif] font-normal text-gray-800 leading-[1.8] text-[0.9rem] mb-4"
+                style={{ fontSize: `${fontSize * 0.9}px` }}
+              >
+                You can apply using either the application form or the student management system on our official portal.
+              </p>
+              <a
+                href="/kfc/docs/kfc_application_form.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#fe7c02] text-white font-['Peugeot',Helvetica,sans-serif] font-semibold py-2 px-4 rounded hover:bg-[#e66b02] transition-colors"
+                style={{ fontSize: `${fontSize * 0.9}px` }}
+              >
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+      <FooterBottom />
+    </div>
   );
 };
 
-export default ForestCardGrid;
+export default Apply;

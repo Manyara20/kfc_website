@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 
 const partners = [
-  "https://whatthelogo.com/storage/logos/fao-food-and-agriculture-organizations-98044.png",
+  
   "https://whatthelogo.com/storage/logos/national-environment-management-authority-83365.png",
-  "https://whatthelogo.com/storage/logos/undp-136787.png",
   "https://www.kefri.org/assets/images/kefri_logo.png",
   "https://whatthelogo.com/storage/logos/kenya-forest-service-96842.webp",
 

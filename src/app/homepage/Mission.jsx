@@ -8,7 +8,7 @@ const principles = [
     id: "ecosystem",
     title: "Our Mission",
     description:
-      "Development and dissemination of best practices in natural resources management through quality teaching, research and outreach.",
+      "To promote best practices in the management of forests and allied resources through quality training, innovation, and outreach.",
     icon: "/icons/ecosystem.png",
     background: "/kfc/hero/Hero1.jpg",
   },

@@ -84,7 +84,7 @@ export default function JobVacancies() {
             >
               <div className="relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-shadow-lg">
-                  Join the Kenya Forest Service
+                  Join the Kenya Forestry College
                 </h1>
                 <p className="mt-2 text-sm sm:text-base max-w-md mx-auto text-shadow-md">
                   Be part of a legacy in conserving Kenya’s forests for a sustainable future.
@@ -99,12 +99,12 @@ export default function JobVacancies() {
             {/* Introduction Section */}
             <div className="p-5 sm:p-8 text-center bg-[#f5f7fa] shadow-md border border-[#e8ecef] m-5 sm:m-8">
               <h2 className="text-xl sm:text-2xl font-semibold text-[#0D5602] mb-4">
-                About Kenya Forest Service
+                About Kenya Forestry College
               </h2>
               <p className="text-sm sm:text-base text-[#333] leading-relaxed max-w-3xl mx-auto">
-                Kenya Forest Service (KFS) is a State Corporation established under the Forest Conservation & Management Act (FCMA), 2016. 
-                The Mandate of KFS is to protect, conserve, develop and sustainably manage forests and allied resources for environmental stability and social-economic 
-                benefits for the present and future generations. 
+                KFC is a technical training institution legally established through section 17 of the 
+                Forest Conservation and Management Act (FCMA) of 2016. It is the entity that promotes 
+                forestry education and training by/within the Kenya Forest Service.
               </p>
             </div>
 
@@ -224,7 +224,7 @@ export default function JobVacancies() {
                 <ul className="text-sm text-[#444] leading-relaxed">
                   <li className="py-1">The application process includes both online and hard copy submissions.</li>
                   <li className="py-1">Shortlisted candidates must provide original documents.</li>
-                  <li className="py-1">KFS is an equal opportunity employer.</li>
+                  <li className="py-1">KFC is an equal opportunity employer.</li>
                 </ul>
               </div>
             </div>

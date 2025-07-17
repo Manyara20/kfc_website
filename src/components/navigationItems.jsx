@@ -31,12 +31,10 @@ const navigationItems = [
   {
     label: "Admission",
     subItems: [
-      { label: "How to Apply", link: "/admission/apply"},
-      { label: "Student Application Form", link: "/admission/apllication-form" },
-      { label: "Deferral Request Form", link: "/admission/deferral-form" },
-      { label: "Student Handbook", link: "/admission/handbook" },
-      { label: "Fees Structure", link: "/admission/fee-structure" },
-      { label: "Service Download Admission Letter", link: "/admission/admission-letter" },
+      { label: "How to Apply", link: "/admissions/apply-now"},
+      { label: "Student Handbook", link: "/admissions/student-handbook" },
+      { label: "Fees Structure", link: "/admissions/fee-structure" },
+      
      
     ], 
   },

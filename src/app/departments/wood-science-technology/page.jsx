@@ -121,7 +121,7 @@ const EnvironmentalManagement = () => {
                   <tr className="bg-[#0f5a28] text-white">
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>S/No.</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Programme</th>
-                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Authority</th>
+                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Curriculum</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Minimum Requirements</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Duration</th>
                   </tr>
@@ -137,6 +137,9 @@ const EnvironmentalManagement = () => {
                     { sno: 7, programme: 'Sawmilling Technology', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
                     { sno: 8, programme: 'Saw Doctoring', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
                     { sno: 9, programme: 'Basic Logging Operations', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
+                    { sno: 10, programme: 'Timber Treatment', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
+                    { sno: 11, programme: 'Timber Drying', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
+                    { sno: 12, programme: 'Pricket Making', authority: 'NITA', requirements: 'Basic Literacy', duration: '2 Weeks' },
                   ].map((course) => (
                     <tr key={course.sno} className="even:bg-gray-100">
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.sno}</td>

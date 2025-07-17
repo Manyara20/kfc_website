@@ -47,8 +47,10 @@ const EnvironmentalManagement = () => {
             className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
             style={{ fontSize: `${fontSize * 0.9}px` }}
           >
-            Kenya Forestry College offers both certificate and diploma courses in environmental management designed to equip individuals with competencies for sustainable environmental practices.
-          </p>
+            The Kenya Forestry College offers a Diploma in Environmental Management, a comprehensive program designed to equip individuals with the technical knowledge and practical skills necessary for promoting and implementing sustainable environmental practices. This competency-based course prepares graduates to serve effectively as Environmental Technicians, with training in the following key areas;
+Environmental disaster and risk management, Water resource management, Environmental waste management, Marine and wetland resource management, Rangeland and wildlife resource management, Energy resource management, Forest resource management, Enforcement of environmental laws and regulations, Greenhouse management and climate change mitigation
+The diploma course is tailored to meet current environmental challenges and aligns with national and global sustainability goals, ensuring that graduates are well prepared to contribute meaningfully to environmental conservation and natural resource management.
+            </p>
         </div>
       </div>
 
@@ -121,7 +123,7 @@ const EnvironmentalManagement = () => {
                   <tr className="bg-[#0f5a28] text-white">
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>S/No.</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Programme</th>
-                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Authority</th>
+                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Curriculum</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Minimum Requirements</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Duration</th>
                   </tr>

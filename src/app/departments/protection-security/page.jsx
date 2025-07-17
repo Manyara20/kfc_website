@@ -102,7 +102,8 @@ const ProtectionSecurity = () => {
                 className="font-['Peugeot',Helvetica,sans-serif] font-normal text-black leading-[1.8] text-[0.9rem]"
                 style={{ fontSize: `${fontSize * 0.9}px` }}
               >
-                Forest Law Enforcement Academy (FoLEA) is the KFS Training Division on Enforcement to its personnel and other stakeholders who comprise Forest Community Scouts, County Administrators, and Enforcement Personnel.
+                Forest Law Enforcement Academy (FoLEA) is the KFS Training Division on Enforcement to its personnel and other 
+                stakeholders who comprise Forest Community Scouts, County Administrators, other co-oprates and Enforcement Personnel.
               </p>
             </div>
           </div>
@@ -121,7 +122,7 @@ const ProtectionSecurity = () => {
                   <tr className="bg-[#0f5a28] text-white">
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>S/No.</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Programme</th>
-                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Authority</th>
+                    <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Curriculum</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Minimum Requirements</th>
                     <th className="border border-gray-300 p-2 text-left font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>Duration</th>
                   </tr>

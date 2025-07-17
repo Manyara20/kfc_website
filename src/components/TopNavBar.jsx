@@ -26,7 +26,7 @@ const TopNavBar = () => {
   // Menu items split into two groups
   const group1 = [
     { text: "Staff Mail", priority: 2, href: "https://mail.google.com", external: true },
-    { text: "Student Affairs", priority: 3, href: "/student-affairs" },
+    { text: "Student Affairs", priority: 3, href: "/about/student-affairs" },
     { text: "Tenders", priority: 3, href: "/tenders" },
     { text: "Careers", priority: 3, href: "/careers" },
   ];
@@ -191,7 +191,7 @@ const TopNavBar = () => {
               )}
             </Box>
           ))}
-          <Link href="/apply" passHref>
+          <Link href="/admissions/apply-now" passHref>
             <Button
               variant="contained"
               sx={{

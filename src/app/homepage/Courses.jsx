@@ -24,7 +24,7 @@ const Courses = () => {
 
       {/* Apply Now Button */}
       <a
-        href="/apply" // Placeholder link, update with actual application URL
+        href="/admissions/apply-now" // Placeholder link, update with actual application URL
         className="bg-[#fe7c02] text-white font-semibold py-3 px-6  hover:bg-green-700 transition-colors duration-300"
       >
         Apply Now
