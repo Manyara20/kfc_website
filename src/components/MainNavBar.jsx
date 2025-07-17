@@ -102,7 +102,7 @@ const MainNavBar = () => {
             opacity: 1,
           },
         }}
-      >
+      > 
         <MenuItem
           sx={{
             fontSize: { md: "0.65rem", lg: "0.65rem", xl: "1.2rem" },
@@ -303,7 +303,7 @@ const MainNavBar = () => {
                         position: "absolute",
                         top: "100%",
                         left: 0,
-                        backgroundColor: isSticky ? "#0D3C00" : "rgba(0,0,0,0.1)",
+                        backgroundColor: isSticky ? "#0D3C00" : "rgba(0,0,0,0.9)",
                         minWidth: "180px",
                         boxShadow: "0 4px 10px rgba(0,0,0,0.3)",
                         zIndex: 1000,

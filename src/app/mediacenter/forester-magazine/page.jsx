@@ -16,12 +16,12 @@ export default function ForesterMagazinePage() {
 
   const magazines = [
     {
-      title: "Field Manual for Biophysical Forest Resources Assessment in Kenya",
+      title: "Forester-January-June-2024",
       fileSize: "1.5 MB",
       link: "/Documents/Forester-January-June-2024-1.pdf",
     },
     {
-      title: "Field Manual for Tree Volume and Biomass Modelling",
+      title: "Forester-by-KFS-Issue-35",
       fileSize: "1.2 MB",
       link: "/Documents/Forester-by-KFS-Issue-35.pdf",
     },

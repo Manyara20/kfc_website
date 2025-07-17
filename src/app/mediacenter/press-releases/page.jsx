@@ -8,10 +8,7 @@ import { motion } from "framer-motion";
 
 export default function PressReleasesPage() {
   const pressReleases = [
-    {
-      title: "Public Views on Disposal (Harvesting) Of Forest Plantation Materials in Public Forests",
-      link: "/Documents/Public-Views-Collection-Form_KFS-2023.pdf",
-    },
+    
     {
       title: "Public Notice Call for Public Views on Disposal (Harvesting) Of Forest Plantation Materials in Public Forests",
       link: "/Documents/PUBLIC-NOTICE-ON-ENVIRONMENTAL-AUDIT-FOR-FOREST-PLANTATION-MANAGEMENT1.pdf",
@@ -20,35 +17,10 @@ export default function PressReleasesPage() {
       title: "Forest Plantation Management and Development",
       link: "/Documents/Public-Views-Collection-Form_KFS-2023.pdf",
     },
-    {
-      title: "Clarification on The Use of Movement Permits to Regulate Harvesting of Trees in The Country",
-      link: "#",
-    },
-    {
-      title: "Revocation of Illegal Forest Title Deeds",
-      link: "#",
-    },
-    {
-      title: "KFS Board invites EACC to look into Forest Destruction",
-      link: "#",
-    },
-    {
-      title: "Amendment of FCMA",
-      link: "#",
-    },
-    {
-      title: "Press Release – 2021 Mangrove Day",
-      link: "#",
-    },
-    {
-      title: "PRESS STATEMENT UPON DEATH OF JOANNA STUCHBURRY",
-      link: "#",
-    },
+    
   ];
 
-  const handleLinkClick = (link, title) => {
-    console.log(`Link clicked for: ${title}, Link: ${link}`);
-  };
+  
 
   return (
     <div>
