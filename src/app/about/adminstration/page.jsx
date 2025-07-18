@@ -101,9 +101,7 @@ export default function KFCSeniorManagementPage() {
       <div className="bg-white min-h-screen px-4 md:px-6 py-4">
         {/* Title and Description */}
         <div className="text-center mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 font-['Peugeot',Helvetica,sans-serif] capitalize tracking-tight">
-            College Management
-          </h1>
+          
           <p className="text-gray-600 text-sm md:text-base max-w-xl mx-auto font-['Peugeot',Helvetica,sans-serif]">
             Meet the dedicated leaders of the Kenya Forestry College, committed to advancing forestry education and training.
           </p>
