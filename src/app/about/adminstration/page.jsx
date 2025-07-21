@@ -8,13 +8,13 @@ import InfoIcon from "@mui/icons-material/Info";
 const managementDetails = {
   principal: {
     image: "/kfc/management/musiyimi.jpg",
-    name: "Mr. Francis Musyimi",
+    name: "Francis Musyimi",
     title: "Principal",
     bio: "The Principal is the chief executive officer of the college responsible for providing strategic leadership, institutional management, and overall administration. The principal ensures the implementation of training policies, academic excellence, financial accountability, and stakeholder engagement.",
   },
   "deputy-principal": {
     image: "/kfc/management/owuor.jpg",
-    name: "Mr. John O. Owuor",
+    name: "John O. Owuor",
     title: "Deputy Principal",
     bio: "The Deputy Principal is the second-in-command and assists the Principal in managing academic affairs, research programs, student services, and daily operations. The deputy often oversees curriculum implementation, staff coordination, and quality assurance.",
   },
@@ -26,13 +26,13 @@ const managementDetails = {
   },
   "academic-officer": {
     image: "/kfc/management/chebii.jpg",
-    name: "Mr. Micah Chebii",
+    name: "Micah Chebii",
     title: "Academic Officer",
     bio: "The Academic Officer oversees the implementation of academic programs, monitors teaching standards, supports curriculum development, and ensures compliance with training objectives. The officer works closely with teaching staff and the Examination Officer to maintain academic quality.",
   },
   "examination-officer": {
     image: "/kfc/management/ngaruingo.jpeg",
-    name: "Mr. Robert Nyaringo",
+    name: "Robert Nyaringo",
     title: "Examination Officer",
     bio: "The Examination Officer is responsible for the planning, coordination, and management of all examinations in the college. Duties include scheduling, invigilation, processing of results, certification, and maintaining exam integrity and recordkeeping.",
   },
@@ -56,7 +56,7 @@ const managementDetails = {
   },
   "forester-masaita-block": {
     image: "/kfc/management/aluda.jpg",
-    name: "Mr. Rickson Aluda",
+    name: "Rickson Aluda",
     title: "Forester – Masaita Block",
     bio: "The Forester – Masaita Block is responsible for managing the field training area (Masaita block). This officer supervises practical student training in forestry operations, including tree nursery management, silviculture, plantation establishment, and environmental conservation.",
   },

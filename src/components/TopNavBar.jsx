@@ -42,10 +42,10 @@ const TopNavBar = () => {
     return true;
   });
 
+  // Ensure phone numbers are visible on mobile screens
   const visibleGroup2 = group2.filter((item) => {
-    if (isExtraSmall) return item.priority === 1;
-    if (isSmall) return item.priority <= 2;
-    return true;
+    if (isExtraSmall || isSmall) return true; // Always show on xs and sm
+    return item.priority <= 2;
   });
 
   return (
@@ -191,6 +191,7 @@ const TopNavBar = () => {
               )}
             </Box>
           ))}
+          {/* Always show Apply for a Course button */}
           <Link href="/admissions/apply-now" passHref>
             <Button
               variant="contained"
