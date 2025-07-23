@@ -84,8 +84,16 @@ const StudentHandbook = () => {
               style={{ fontSize: `${fontSize * 0.9}px` }}
             >
               The Kenya Forestry College Student Handbook provides essential information on academic policies, campus resources, code of conduct, and student services to support your educational experience. Download the handbook to stay informed and make the most of your time at KFC.
-            </p>
-            <a
+            </p> 
+            <img
+            src="/kfc/handbook.png"
+            download
+            href="/kfc/docs/student_handbook.pdf"
+            alt="Kenya Forestry College Campus"
+            className="w-full h-full object-cover"
+            style={{ minHeight: "300px" }}
+          />
+            <a 
               href="/kfc/docs/student_handbook.pdf"
               download
               className="inline-block bg-[#fe7c02] text-white font-['Peugeot',Helvetica,sans-serif] font-semibold py-2 px-4 rounded hover:bg-[#e66b02] transition-colors"

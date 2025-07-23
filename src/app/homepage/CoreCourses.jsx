@@ -18,7 +18,7 @@ const courses = [
     requirement: "KCSE Mean Grade C-(minus)",
     duration: "2 Years",
     intake: "May",
-    image: "/kfc/core/core2.jpg",
+    image: "/kfc/core/envroniment.png",
   },
   {
     title: "Diploma in Wood Science and Technology",
@@ -67,7 +67,7 @@ const CoreCourses = () => {
                   {course.title}
                 </h3>
                 <p className="text-sm text-gray-600 mb-2">
-                  <span className="font-semibold">Authority:</span> {course.authority}
+                  <span className="font-semibold">Curriculum:</span> {course.authority}
                 </p>
                 <p className="text-sm text-gray-600 mb-2">
                   <span className="font-semibold">Minimum Requirement:</span>{" "}

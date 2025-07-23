@@ -374,7 +374,7 @@ const MainNavBar = () => {
               sx={{
                 backgroundColor: isSticky ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)",
                 color: isSticky ? "#fff" : "#fff",
-                borderRadius: "4px",
+                borderRadius: "0px",
                 padding: { xs: "6px 14px", md: "8px 18px" },
                 display: "flex",
                 gap: 1,
@@ -383,18 +383,18 @@ const MainNavBar = () => {
                 },
               }}
             >
-              <Link href="https://x.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://x.com/LondianiKfc?t=sD2K8H64ZJAChDRqD4uD5w&s=09" target="_blank" rel="noopener noreferrer">
                 <Typography sx={{ color: isSticky ? "#fff" : "#fff", fontSize: { xs: "1.6rem", xl: "2.2rem" }, fontWeight: "bold" }}>
                   X
                 </Typography>
               </Link>
-              <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.facebook.com/share/1JqUFNiSwp/" target="_blank" rel="noopener noreferrer">
                 <Facebook sx={{ color: isSticky ? "#fff" : "#fff", fontSize: { xs: "1.6rem", xl: "2.2rem" } }} />
               </Link>
-              <Link href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+              <Link href="https://www.instagram.com/forestrycollegeke?igsh=N3g5a2NyOG9jejQ3 " target="_blank" rel="noopener noreferrer">
                 <Instagram sx={{ color: isSticky ? "#fff" : "#fff", fontSize: { xs: "1.6rem", xl: "2.2rem" } }} />
               </Link>
-              <Link href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+              <Link href="/" target="_blank" rel="noopener noreferrer">
                 <YouTube sx={{ color: isSticky ? "#fff" : "#fff", fontSize: { xs: "1.6rem", xl: "2.2rem" } }} />
               </Link>
             </Button>
