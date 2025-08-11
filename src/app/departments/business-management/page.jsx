@@ -132,7 +132,7 @@ const BusinessManagement = () => {
                     { sno: 2, programme: 'Certificate in Business Management', authority: 'TVET CDACC', requirements: 'KCSE Mean Grade D (Plain)', duration: '1 Year' },
                     { sno: 3, programme: 'Green value chain enterprises', authority: 'Internal', requirements: 'Basic Literacy', duration: '1 Month' },
                   ].map((course) => (
-                    <tr key={course.sno} className="even:bg-gray-100">
+                    <tr key={course.sno} className="even:bg-gray-100 text-black">
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.sno}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.programme}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.authority}</td>

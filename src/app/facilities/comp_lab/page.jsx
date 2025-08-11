@@ -87,13 +87,13 @@ const Hostel = () => {
             className="font-['Peugeot',Helvetica,sans-serif] font-bold text-white text-[2.2rem] sm:text-[3rem] leading-[1.3] tracking-[0.5px] capitalize"
             style={{ fontSize: `${fontSize * 2}px` }}
           >
-            Hostel Blocks
+            Comp Lab 
           </h1>
           <p
             className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
             style={{ fontSize: `${fontSize * 0.9}px` }}
           >
-            The college has 2 modern hostels with a capacity of 256 complemented by the 144 capacity prefab hostels.
+            Our state-of-the-art computer lab at Kenya Forestry College is equipped with 40 modern workstations...
           </p>
         </div>
       </div>

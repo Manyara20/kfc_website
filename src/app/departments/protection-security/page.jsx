@@ -132,7 +132,7 @@ const ProtectionSecurity = () => {
                     { sno: 1, programme: 'County Government Law Enforcement Courses', authority: 'Internal', requirements: 'Basic Literacy', duration: '1 Month' },
                     { sno: 2, programme: 'Community Forest Scouts Courses', authority: 'Internal', requirements: 'Basic Literacy', duration: '1 Month' },
                   ].map((course) => (
-                    <tr key={course.sno} className="even:bg-gray-100">
+                    <tr key={course.sno} className="even:bg-gray-100 text-black">
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.sno}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.programme}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.authority}</td>

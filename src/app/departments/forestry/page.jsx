@@ -146,7 +146,7 @@ const Forestry = () => {
                     { sno: 16, programme: 'Agroforestry and Community Development', authority: 'Internal', requirements: 'Basic Literacy', duration: '2 Weeks' },
                     { sno: 17, programme: 'Dryland Forestry', authority: 'Internal', requirements: 'Basic Literacy', duration: '2 Weeks' },
                   ].map((course) => (
-                    <tr key={course.sno} className="even:bg-gray-100">
+                    <tr key={course.sno} className="even:bg-gray-100 text-black">
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.sno}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.programme}</td>
                       <td className="border border-gray-300 p-2 font-['Peugeot',Helvetica,sans-serif]" style={{ fontSize: `${fontSize * 0.9}px` }}>{course.authority}</td>

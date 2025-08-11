@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Column 1: Logo, Tagline */}
           <div className="p-6 sm:p-4 md:p-3 flex flex-col items-start">
             <Image
-                    src="/kfc/kfc_logo100x100.png"
+                    src="/kfc/logo/transparent.jpg"
                     alt="Logo"
                     width={64}
                     height={64}
