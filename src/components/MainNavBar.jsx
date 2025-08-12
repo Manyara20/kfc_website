@@ -258,10 +258,10 @@ const MainNavBar = () => {
           <Box sx={{ flexShrink: 0, paddingTop: "0.5rem", paddingBottom: "0.5rem" }}>
             <Link href="/">
               <Image
-                src="/kfc/logo/logo.jpg"
+                src="/kfc/logo/transparent.png"
                 alt="KFC Logo"
-                width={64}
-                height={48}
+                width={72}
+                height={42}
               />
             </Link>
           </Box>
