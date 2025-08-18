@@ -260,8 +260,8 @@ const MainNavBar = () => {
               <Image
                 src="/kfc/logo/transparent.png"
                 alt="KFC Logo"
-                width={72}
-                height={42}
+                width={64}
+                height={48}
               />
             </Link>
           </Box>
@@ -297,8 +297,8 @@ const MainNavBar = () => {
                         cursor: "pointer",
                         display: "flex",
                         alignItems: "center",
-                        fontSize: { md: "0.75rem", lg: "0.75rem", xl: "1.2rem" },
-                                     fontWeight: 600,
+                        fontSize: { md: "0.65rem", lg: "0.65rem", xl: "1rem" },
+                        fontWeight: 700,
                         padding: { md: "5px 7px", lg: "7px 10px" },
                         "&:hover": { backgroundColor: isSticky ? "rgba(255,255,255,0.1)" : "rgba(106,150,31,0.1)" },
                         textTransform: "capitalize",
@@ -341,7 +341,7 @@ const MainNavBar = () => {
                   >
                     <Typography
                       sx={{
-                        fontSize: { md: "0.75rem", lg: "0.75rem", xl: "1.2rem" },
+                        fontSize: { md: "0.65rem", lg: "0.65rem", xl: "1rem" },
                                      fontWeight: 600,
                         textTransform: "capitalize",
                       }}
@@ -360,7 +360,7 @@ const MainNavBar = () => {
                 sx={{
                   color: isSticky ? "#fff" : "#fff",
                   fontWeight: "bold",
-                  padding: { md: "5px", lg: "7px" },
+                  padding: { md: "2px", lg: "4px" },
                   "&:hover": { backgroundColor: isSticky ? "rgba(255,255,255,0.1)" : "rgba(106,150,31,0.1)" },
                 }}
                 onClick={toggleSearchDrawer}

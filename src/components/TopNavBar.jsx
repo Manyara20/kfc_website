@@ -113,6 +113,7 @@ const TopNavBar = () => {
                       lg: "1rem",
                     },
                     fontFamily: "'Peugeot', Helvetica, sans-serif",
+                    fontWeight: 600,
                     textTransform: "capitalize",
                     whiteSpace: "nowrap",
                     overflow: "hidden",
@@ -166,12 +167,13 @@ const TopNavBar = () => {
                 sx={{
                   color: "white",
                   fontSize: {
-                    xs: "0.65rem",
+                    xs: "0.75rem",
                     sm: "0.75rem",
                     md: "0.875rem",
                     lg: "1rem",
                   },
                   fontFamily: "'Peugeot', Helvetica, sans-serif",
+                  fontWeight: 600,
                   whiteSpace: "nowrap",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
@@ -210,19 +212,7 @@ const TopNavBar = () => {
               Apply for a Course
             </Button>
           </Link>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              gap: { xs: 0.5, sm: 1 },
-              marginLeft: { xs: 0.5, sm: 1, md: 1.5 },
-            }}
-          >
-            <FacebookIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
-            <TwitterIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
-            <InstagramIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
-            <TikTokIcon sx={{ color: "white", fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" } }} />
-          </Box>
+          
         </Box>
       </Toolbar>
     </AppBar>
