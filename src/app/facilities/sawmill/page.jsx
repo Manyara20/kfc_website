@@ -87,13 +87,13 @@ const Sawmill = () => {
             className="font-['Peugeot',Helvetica,sans-serif] font-bold text-white text-[2.2rem] sm:text-[3rem] leading-[1.3] tracking-[0.5px] capitalize"
             style={{ fontSize: `${fontSize * 2}px` }}
           >
-            Tree Nurseries
+            TIMBER VALUE ADDITION CENTER AT KFC (Under Construction)
           </h1>
           <p
             className="font-['Peugeot',Helvetica,sans-serif] font-normal text-white leading-[1.8] text-[1rem] mt-4"
             style={{ fontSize: `${fontSize * 0.9}px` }}
           >
-            With modern tree nurseries
+            A modern sawmill under construction to provide practical skills to students in timber processing and value addition.
           </p>
         </div>
       </div>
@@ -142,8 +142,14 @@ const Sawmill = () => {
                 className="font-['Peugeot',Helvetica,sans-serif] font-normal text-black leading-[1.8] text-[0.9rem]"
                 style={{ fontSize: `${fontSize * 0.9}px` }}
               >
-                Kenya Forestry College has nurseries within the college for 
-                students training with a capacity of over 500,000 seedlings while the largest  tree nursery with a capacity of 2 million seedlings.
+                The Timber Value Addition Center at Kenya Forestry College, currently under construction, is
+                supported by the GreenZones Development Support Project Phase II. The center is designated to
+                enhance the forestry value chain through facilities for sawmilling, timber drying, briquette
+                production, wood treatment, furniture and door manufacturing. It will also serve as the hub for
+                capacity building, offering training for students and industrial players, and hosting practical
+                demonstrations. The center will feature a showroom for display, a computer lab for CAD
+                training, and the office for Community Forest Association members. Additionally, it will provide
+                common user facilities, enabling local communities to bring in raw materials for value addition.
               </p>
             </div>
           </div>
@@ -167,18 +173,18 @@ const Sawmill = () => {
               {[
                 {
                   src: '/kfc/nursery/nuserya.jpg',
-                  alt: 'Masaita Forest scenery',
-                  caption: 'Tree nurseries',
+                  alt: 'Sawmill under construction',
+                  caption: 'Sawmill under construction',
                 },
                 {
                   src: '/kfc/nursery/nurseryb.jpeg',
-                  alt: 'Masaita Forest trail',
-                  caption: 'Tree nurseries',
+                  alt: 'Sawmill under construction',
+                  caption: 'Sawmill under construction',
                 },
                 {
                   src: '/kfc/nursery/nurseryc.jpeg',
-                  alt: 'Masaita Forest wildlife',
-                  caption: 'Tree nurseries',
+                  alt: 'Sawmill under construction',
+                  caption: 'Sawmill under construction',
                 },
               ].map((image, i) => (
                 <div key={i} className="relative">
