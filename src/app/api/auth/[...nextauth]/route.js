@@ -1,7 +1,8 @@
-import { handlers } from "../../../lib/auth";
+// app/api/auth/[...nextauth]/route.js
+import NextAuth from "next-auth";
+import { authOptions } from "../../../../auth";  // adjust path if needed (e.g. "../../../../lib/auth" depending on exact nesting)
 
-export const GET = handlers.GET;
-export const POST = handlers.POST;
-export const PUT = handlers.PUT;
-export const DELETE = handlers.DELETE;
-export const PATCH = handlers.PATCH;
+const handler = NextAuth(authOptions);
+
+export const GET = handler;
+export const POST = handler;

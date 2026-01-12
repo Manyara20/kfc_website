@@ -1,9 +1,11 @@
 // src/app/dashboard/page.jsx
-import { auth } from "../lib/auth";
+import { auth } from "../../auth";
+
+export const dynamic = 'force-dynamic';// from src/app/dashboard/ → root: up 2 levels
 
 export default async function DashboardHome() {
   const session = await auth();
-  if (!session) return null;
+  if (!session) return null;  // or redirect("/login") if you want
 
   return (
     <div className="text-black">
@@ -11,4 +13,5 @@ export default async function DashboardHome() {
       <p>Select an option from the sidebar to manage content.</p>
     </div>
   );
+  
 }

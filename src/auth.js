@@ -1,3 +1,4 @@
+// src/app/lib/auth.js
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
@@ -22,6 +23,7 @@ export const authOptions = {
             return null;
           }
 
+          // localStorage is client-only — safe guard
           if (typeof window !== "undefined") {
             localStorage.setItem("backendToken", token);
           }
@@ -54,9 +56,11 @@ export const authOptions = {
       return token;
     },
     async session({ session, token }) {
-      session.user.id = token.id;
-      session.user.role = token.role;
-      session.user.backendToken = token.backendToken;
+      if (session.user) {
+        session.user.id = token.id;
+        session.user.role = token.role;
+        session.user.backendToken = token.backendToken;
+      }
       return session;
     },
   },
@@ -66,22 +70,5 @@ export const authOptions = {
   secret: process.env.NEXTAUTH_SECRET,
 };
 
-// Initialize NextAuth
-const nextAuthInstance = NextAuth(authOptions);
-
-// Export handlers and middleware
-export const handlers = {
-  GET: nextAuthInstance.handlers.GET,
-  POST: nextAuthInstance.handlers.POST,
-  PUT: nextAuthInstance.handlers.PUT || ((req, res) => res.status(405).json({ error: "Method Not Allowed" })),
-  DELETE: nextAuthInstance.handlers.DELETE || ((req, res) => res.status(405).json({ error: "Method Not Allowed" })),
-  PATCH: nextAuthInstance.handlers.PATCH || ((req, res) => res.status(405).json({ error: "Method Not Allowed" })),
-};
-
-export const auth = nextAuthInstance.auth;
-export const signIn = nextAuthInstance.signIn;
-export const signOut = nextAuthInstance.signOut;
-
-// Debug export types
-console.log("auth type:", typeof auth, "auth:", auth);
-console.log("handlers type:", typeof handlers, "handlers:", handlers);
+// This is the key v5 export — provides handlers, auth, signIn, signOut
+export const { handlers, auth, signIn, signOut } = NextAuth(authOptions);
