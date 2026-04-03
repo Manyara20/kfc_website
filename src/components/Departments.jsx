@@ -1,4 +1,4 @@
- 'use client';
+'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -54,10 +54,10 @@ const Departments = () => {
   // Automatic rotation every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNext();
+      setCurrentGroup((prev) => (prev + 1) % totalGroups);
     }, 8000);
     return () => clearInterval(interval);
-  }, [currentGroup]);
+  }, [totalGroups]);
 
   const handleNext = () => {
     if (isTransitioning) return;

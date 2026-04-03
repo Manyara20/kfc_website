@@ -12,9 +12,9 @@ const EventCard = ({ date, title, time, venue, onClick }) => {
   return (
     <button
       onClick={onClick}
-      className="flex-none w-full sm:w-1/3 p-2 sm:p-3 transition-all duration-200 hover:bg-[#e6f5e6] hover:text-[#000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ff0000]"
+      className="flex-none w-full sm:w-1/3 p-2 sm:p-3 transition-all duration-200 hover:bg-[#e6f5e6] hover:text-[#000] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#00ff4c]"
     >
-      <div className="bg-[#fe7c02] text-[#fff] rounded p-2 sm:p-3 flex flex-col h-full">
+      <div className="bg-[#eb7c14] text-[#fff] rounded p-2 sm:p-3 flex flex-col h-full">
         <img
           src="/kfc/facility/lib.jpg"
           alt="Event Banner"
@@ -45,10 +45,11 @@ const EventsFeed = () => {
     const fetchEvents = async () => {
       try {
         const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/events/public`);
-        const currentDate = new Date();
+        const todayMidnight = new Date();
+        todayMidnight.setHours(0, 0, 0, 0);
         // Filter events to include only future or current events
         const futureEvents = response.data.filter(
-          (event) => new Date(event.date) >= currentDate.setHours(0, 0, 0, 0)
+          (event) => new Date(event.date) >= todayMidnight
         );
         // Take only the first three events
         setEvents(futureEvents.slice(0, 3));

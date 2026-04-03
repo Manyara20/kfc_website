@@ -4,9 +4,15 @@ import { useEffect, useState } from "react";
 
 const partners = [
   
-  "https://whatthelogo.com/storage/logos/national-environment-management-authority-83365.png",
+ 
   "https://www.kefri.org/assets/images/kefri_logo.png",
-  "https://whatthelogo.com/storage/logos/kenya-forest-service-96842.webp",
+  '/kfc/logo/images.jpeg',
+  '/kfc/logo/tveta.png',
+  '/kfc/kfs.png',
+  "https://www.kefri.org/assets/images/kefri_logo.png",
+  '/kfc/logo/images.jpeg',
+  '/kfc/logo/tveta-logo.png',
+  '/kfc/kfs.png',
 
 ];
 

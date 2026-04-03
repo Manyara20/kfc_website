@@ -1,4 +1,5 @@
 import "./styles/globals.css";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
 export const metadata = {
   title: "Kenya Forestry College",
@@ -26,10 +27,12 @@ export default function RootLayout({ children }) {
           style={{
             backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
           }}
-        ></div>
-        <main className="relative z-10">
-          {children}
-        </main>
+        />
+        <AppRouterCacheProvider>
+          <main className="relative z-10">
+            {children}
+          </main>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

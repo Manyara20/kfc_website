@@ -1,15 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const NewsCard = ({ title, description, imageUrl, author, date, comments, className }) => {
-  return (
-    <div
-      className={`bg-gray-100 shadow-lg flex-1 flex flex-col min-w-0 ${className}`} // flex-1 for equal width, flex-col for height control
-    >
+const NewsCard = ({ title, description, imageUrl, author, date, comments, className, href }) => {
+  const card = (
+    <div className={`bg-gray-100 shadow-lg flex-1 flex flex-col min-w-0 ${className ?? ""}`}>
       <div
-        className="h-62 bg-gray-300 flex-shrink-0" // Fixed height for image, no shrinking
+        className="h-62 bg-gray-300 flex-shrink-0"
         style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: "cover" }}
-      ></div>
-      <div className="p-4 flex flex-col flex-grow"> {/* flex-grow to fill remaining space */}
+      />
+      <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-green-900 font-extrabold text-center uppercase text-lg xl:text-xl">
           {title}
         </h3>
@@ -27,15 +26,24 @@ const NewsCard = ({ title, description, imageUrl, author, date, comments, classN
             {comments} Comments
           </span>
         </div>
-        <p className="text-gray-700 text-base xl:text-lg flex-grow">{description}</p> {/* flex-grow ensures content stretches */}
+        <p className="text-gray-700 text-base xl:text-lg flex-grow">{description}</p>
         <div className="flex justify-center mt-4">
-          <button className="text-black text-lg xl:text-xl font-extrabold hover:underline">
+          <span className="text-black text-lg xl:text-xl font-extrabold hover:underline">
             READ MORE
-          </button>
+          </span>
         </div>
       </div>
     </div>
   );
+
+  if (href) {
+    return (
+      <Link href={href} className="flex flex-col flex-1 min-w-0">
+        {card}
+      </Link>
+    );
+  }
+  return card;
 };
 
 export default NewsCard;

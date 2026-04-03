@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import axios from "axios";
+
+const formatDate = (dateStr) => {
+  if (!dateStr) return "Unknown Date";
+  const d = new Date(dateStr);
+  if (isNaN(d.getTime())) return "Unknown Date";
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+};
 
 const NewsSection = () => {
   const [newsData, setNewsData] = useState([]);
@@ -55,7 +63,7 @@ const NewsSection = () => {
   const getImageUrl = (image) => {
     return image
       ? `${process.env.NEXT_PUBLIC_API_URL.replace('/api', '')}${image}`
-      : "https://via.placeholder.com/150x100";
+      : "/images/placeholder.png";
   };
 
   const isImageFile = (file_url) => {
@@ -81,24 +89,25 @@ const NewsSection = () => {
             <p className="text-gray-600 text-center text-base">No news available at this time.</p>
           ) : (
             <ul className="space-y-4">
-              {newsData.map((item, index) => (
-                <li key={index} className="flex items-start bg-white p-4 rounded-lg shadow">
-                  <img
-                    src={getImageUrl(item.image)}
-                    alt={item.title}
-                    className="w-32 h-20 object-cover rounded mr-4"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-[#0E2E0E]">{item.title}</h3>
-                    <p className="text-sm text-gray-600">{truncateContent(item.content)}</p>
-                    <p className="text-xs text-gray-500 mt-1">
-                      {new Date(item.created_at).toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </p>
-                  </div>
+              {newsData.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={`/mediacenter/news-events/${item.id}`}
+                    className="flex items-start bg-white p-4 rounded-lg shadow hover:shadow-md hover:bg-green-50 transition-colors group"
+                  >
+                    <img
+                      src={getImageUrl(item.image)}
+                      alt={item.title}
+                      className="w-32 h-20 object-cover rounded mr-4 flex-shrink-0"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold text-[#0E2E0E] group-hover:text-[#0f5a28] group-hover:underline">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-gray-600 mt-1">{truncateContent(item.content)}</p>
+                      <p className="text-xs text-gray-500 mt-1">{formatDate(item.date)}</p>
+                    </div>
+                  </Link>
                 </li>
               ))}
             </ul>

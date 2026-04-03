@@ -3,14 +3,19 @@
 /* Import Tailwind CSS */
 @import "tailwindcss";
 
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-family-peugeot: 'Peugeot', 'Peugeot New';
+}
+
 /* Custom Fonts */
 @font-face {
   font-family: 'Futura';
   font-style: normal;
   font-weight: 400;
-  font-size:1.2rem;
-  src: url('/fonts/Futura Book font.ttf') format('woff2'),
-       url('/fonts/Futura futura medium bt.ttf') format('woff');
+  src: url('/fonts/Futura Book font.ttf') format('truetype'),
+       url('/fonts/Futura futura medium bt.ttf') format('truetype');
 }
 
 

@@ -80,7 +80,6 @@ const HeadOfDepartments = () => {
                 initial="initial"
                 animate="animate"
                 className="relative h-120 overflow-hidden shadow-xl bg-white flex flex-col"
-               _batches
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               >
                 <Image
@@ -88,7 +87,7 @@ const HeadOfDepartments = () => {
                   alt={hod.name}
                   width={400}
                   height={300}
-                  className="w-full h-[360px] object-fit transition-transform duration-500"
+                  className="w-full h-[360px] object-cover transition-transform duration-500"
                   unoptimized
                 />
                 <div className="p-4 flex flex-col justify-between flex-grow">

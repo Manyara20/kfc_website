@@ -1,11 +1,12 @@
 // src/app/dashboard/page.jsx
-import { auth } from "../../auth";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../auth";
 
-export const dynamic = 'force-dynamic';// from src/app/dashboard/ → root: up 2 levels
+export const dynamic = 'force-dynamic';
 
 export default async function DashboardHome() {
-  const session = await auth();
-  if (!session) return null;  // or redirect("/login") if you want
+  const session = await getServerSession(authOptions);
+  if (!session) return null;
 
   return (
     <div className="text-black">

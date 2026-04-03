@@ -1,4 +1,4 @@
-// src/app/lib/auth.js
+// src/auth.js
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import axios from "axios";
@@ -21,11 +21,6 @@ export const authOptions = {
 
           if (!user || !token) {
             return null;
-          }
-
-          // localStorage is client-only — safe guard
-          if (typeof window !== "undefined") {
-            localStorage.setItem("backendToken", token);
           }
 
           return {
@@ -69,6 +64,3 @@ export const authOptions = {
   },
   secret: process.env.NEXTAUTH_SECRET,
 };
-
-// This is the key v5 export — provides handlers, auth, signIn, signOut
-export const { handlers, auth, signIn, signOut } = NextAuth(authOptions);

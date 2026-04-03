@@ -1,3 +1,5 @@
+// next.config.mjs
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -21,6 +23,14 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "www.flaticon.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.transparenttextures.com",
       },
     ],
   },
