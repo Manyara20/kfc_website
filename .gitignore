@@ -8,7 +8,6 @@
 /node_modules
 /.env.local
 /.pnp
-/.claude
 .pnp.*
 .yarn/*
 !.yarn/patches
