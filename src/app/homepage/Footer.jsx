@@ -24,14 +24,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0D3C00] text-white py-12 sm:py-10 md:py-8 lg:py-6 w-full border-t-4 border-[#1f5d2f] relative overflow-hidden">
       {/* Background Overlay with Forest Theme */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          backgroundSize: "200px 200px",
-          backgroundRepeat: "repeat",
-        }}
-      />
+      <div className="absolute inset-0 opacity-10 bg-leaf-pattern bg-[length:200px_200px] bg-repeat" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0D3C00]/80 to-[#1f5d2f]/80"></div>
 
       <div className="relative px-2 sm:px-2 md:px-2 lg:px-2">

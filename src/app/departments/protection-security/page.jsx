@@ -30,10 +30,7 @@ const ProtectionSecurity = () => {
       <MainNavBar />
       {/* Hero */}
       <div
-        className="relative h-[30vh] bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-        }}
+        className="relative h-[30vh] bg-[url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center flex items-center justify-center"
       >
         <div className="absolute inset-0 bg-opacity-60" />
         <div className="relative z-10 text-left text-green-600 px-6 max-w-4xl">
@@ -54,16 +51,12 @@ const ProtectionSecurity = () => {
 
       {/* Main Content */}
       <div
-        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
+        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden bg-forest-main"
+
       >
         <div
-          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
-          style={{
-            backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          }}
+          className="absolute inset-0 bg-no-repeat opacity-5 z-0 bg-leaf-pattern"
+
         ></div>
 
         {/* Main Section */}

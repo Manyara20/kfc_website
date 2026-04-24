@@ -29,12 +29,7 @@ const ICT = () => {
     <div>
       <MainNavBar />
       {/* Hero */}
-      <div
-        className="relative h-[30vh] bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-        }}
-      >
+      <div className="relative h-[30vh] bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center flex items-center justify-center">
         <div className="absolute inset-0 bg-opacity-60" />
         <div className="relative z-10 text-left text-blue-600 px-6 max-w-4xl">
           <h1
@@ -53,18 +48,8 @@ const ICT = () => {
       </div>
 
       {/* Main Content */}
-      <div
-        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
-      >
-        <div
-          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
-          style={{
-            backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          }}
-        ></div>
+      <div className="min-h-screen bg-[image:linear-gradient(rgba(0,51,102,0.8),rgba(0,51,102,0.8)),url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-leaf-pattern bg-no-repeat opacity-5 z-0"></div>
 
         {/* Main Section */}
         <motion.div

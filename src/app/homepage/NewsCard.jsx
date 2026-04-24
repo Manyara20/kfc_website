@@ -5,8 +5,8 @@ const NewsCard = ({ title, description, imageUrl, author, date, comments, classN
   const card = (
     <div className={`bg-gray-100 shadow-lg flex-1 flex flex-col min-w-0 ${className ?? ""}`}>
       <div
-        className="h-62 bg-gray-300 flex-shrink-0"
-        style={{ backgroundImage: `url(${imageUrl})`, backgroundSize: "cover" }}
+        className="h-62 bg-gray-300 flex-shrink-0 bg-cover"
+        style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-green-900 font-extrabold text-center uppercase text-lg xl:text-xl">

@@ -96,18 +96,12 @@ const HeroSection = () => {
         {/* Text Content and CTA Buttons */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center text-center z-10 p-4 sm:p-8 md:p-10 lg:p-12 w-full max-w-6xl">
           <h1
-            className="font-bold mb-3 sm:mb-8 md:mb-10 tracking-wider text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-            style={{
-              textShadow: "2px 2px 5px rgba(0, 0, 0, 0.7)",
-            }}
+            className="font-bold mb-3 sm:mb-8 md:mb-10 tracking-wider text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl [text-shadow:2px_2px_5px_rgba(0,0,0,0.7)]"
           >
             {slides[currentSlide].title}
           </h1>
           <p
-            className="mb-6 sm:mb-12 md:mb-14  text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl" //italic
-            style={{
-              textShadow: "1px 1px 3px rgba(0, 0, 0, 0.7)",
-            }}
+            className="mb-6 sm:mb-12 md:mb-14 text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl [text-shadow:1px_1px_3px_rgba(0,0,0,0.7)]"
           >
             {slides[currentSlide].subtitle}
           </p>
@@ -115,16 +109,12 @@ const HeroSection = () => {
             <a
               href={slides[currentSlide].ctaLink}
               className="inline-block bg-white text-[#fe7c02] px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-[#0D3C00] hover:text-white transition-all duration-300"
-              style={{
-              }}
             >
               {slides[currentSlide].ctaText}
             </a>
             <a
               href={slides[currentSlide].secondaryCtaLink}
               className="inline-block bg-[#fe7c02] text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-md hover:bg-white hover:text-[#0D3C00] transition-all duration-300"
-              style={{
-              }}
             >
               {slides[currentSlide].secondaryCtaText}
             </a>

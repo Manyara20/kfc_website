@@ -33,17 +33,10 @@ const KFCGuesthousePage = () => {
       <TopNavBar />
       <MainNavBar />
       <div
-        className="min-h-screen  bg-cover bg-center bg-fixed flex justify-center items-center p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
+        className="min-h-screen  bg-cover bg-center bg-fixed flex justify-center items-center p-8 relative overflow-hidden bg-forest-main"
+
       >
-        <div
-          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
-          style={{
-            backgroundImage: `url('/kfc/facility/Hospitality.jpg')`,
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-[url('/kfc/facility/Hospitality.jpg')] bg-no-repeat opacity-5 z-0"></div>
         <motion.div
           initial="hidden"
           animate={isVisible ? 'visible' : 'hidden'}

@@ -36,8 +36,7 @@ const About = () => {
           <img
             src="/kfc/hero/graduands.jpg"
             alt="Kenya Forestry College Campus"
-            className="w-full h-full object-cover"
-            style={{ minHeight: "300px" }}
+            className="w-full h-full object-cover min-h-[300px]"
           />
         </div>
       </div>

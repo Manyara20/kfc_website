@@ -138,16 +138,12 @@ export default function EventsCalendarPage() {
       <TopNavBar />
      <MainNavBar />
       <div
-        className="min-h-screen bg-cover bg-center bg-fixed p-4 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
+        className="min-h-screen bg-cover bg-center bg-fixed p-4 relative overflow-hidden bg-forest-main"
+
       >
         <div
-          className="absolute inset-0 opacity-5 z-0"
-          style={{
-            backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          }}
+          className="absolute inset-0 opacity-5 z-0 bg-leaf-pattern"
+
         ></div>
         <div className="max-w-5xl mx-auto px-2 py-8 relative z-10">
           <motion.div

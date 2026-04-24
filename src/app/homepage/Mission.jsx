@@ -111,8 +111,7 @@ const Principles = () => {
             alt={activePrinciple.title}
             width={32}
             height={32}
-            className="sm:w-[40px] sm:h-[40px]"
-            style={{ filter: "brightness(0) invert(1)" }}
+            className="sm:w-[40px] sm:h-[40px] brightness-0 invert"
           />
           <div className="animate-fade-in">
             <h3 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2 uppercase">
@@ -125,22 +124,6 @@ const Principles = () => {
         </div>
       </div>
 
-      {/* Inline Styles */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in {
-          animation: fadeIn 0.5s ease-in-out;
-        }
-      `}</style>
     </section>
   );
 };

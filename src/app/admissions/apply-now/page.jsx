@@ -29,10 +29,7 @@ const Apply = () => {
       <MainNavBar />
       {/* Hero */}
       <div
-        className="relative h-[40vh] bg-cover bg-center flex items-center justify-center"
-        style={{
-          backgroundImage: "url('/kfc/hero/Hero1.jpg')",
-        }}
+        className="relative h-[40vh] bg-cover bg-center flex items-center justify-center bg-[url('/kfc/hero/Hero1.jpg')]"
       >
         <div className="absolute inset-0 bg-opacity-60" />
         <div className="relative z-10 text-center text-green-600 px-6 max-w-7xl">
@@ -53,16 +50,11 @@ const Apply = () => {
 
       {/* Main Content */}
       <div
-        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
+        className="min-h-screen bg-cover bg-center bg-fixed flex flex-col items-center p-4 sm:p-6 md:p-8 relative overflow-hidden bg-forest-main"
+
       >
         <div
-          className="absolute inset-0 bg-no-repeat opacity-5 z-0"
-          style={{
-            backgroundImage: `url('/kfc/clas_lab.jpg')`,
-          }}
+          className="absolute inset-0 bg-no-repeat opacity-5 z-0 bg-[url('/kfc/clas_lab.jpg')]"
         ></div>
 
         {/* Application Section */}

@@ -34,7 +34,7 @@ const MapComponent = ({ mapCenter, locations }) => {
     <MapContainer
       center={mapCenter}
       zoom={7}
-      style={{ height: '100%', width: '100%' }}
+      className="h-full w-full"
       
     >
       <TileLayer

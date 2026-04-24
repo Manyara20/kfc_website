@@ -28,12 +28,7 @@ const stats = [
 
 const Counter = () => {
   return (
-    <section
-      className="relative w-full py-12 px-4 sm:px-6 bg-cover bg-center text-white"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/forestry_background.jpg)`,
-      }}
-    >
+    <section className="relative w-full py-12 px-4 sm:px-6 bg-counter bg-cover bg-center text-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (

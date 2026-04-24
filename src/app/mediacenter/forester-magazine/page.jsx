@@ -37,18 +37,8 @@ export default function ForesterMagazinePage() {
       <TopNavBar />
       <MainNavBar />
       
-      <div
-        className="min-h-screen bg-cover bg-center bg-fixed flex justify-center items-center p-8 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 50, 20, 0.8), rgba(0, 50, 20, 0.8)), url('/images/background-template/background.jpg')`,
-        }}
-      >
-        <div
-          className="absolute inset-0 bg-no-repeat opacity-10 z-0"
-          style={{
-            backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          }}
-        ></div>
+      <div className="min-h-screen bg-forest-bg bg-cover bg-center bg-fixed flex justify-center items-center p-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-leaf-pattern bg-no-repeat opacity-10 z-0"></div>
         <motion.div
           initial="hidden"
           animate={isVisible ? "visible" : "hidden"}
@@ -103,8 +93,7 @@ export default function ForesterMagazinePage() {
             {magazines.map((magazine, index) => (
               <div
                 key={index}
-                className="bg-white rounded-lg p-4 shadow-md relative"
-                style={{ backgroundColor: '#0f5a28' }}
+                className="bg-[#0f5a28] rounded-lg p-4 shadow-md relative"
               >
                 <div className="bg-white rounded-lg p-6">
                   <div className="flex items-center gap-4">

@@ -103,27 +103,24 @@ const ManagementProfile = () => {
               <Image
                 src={profile.image}
                 alt={profile.name}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-full border-4 border-[#6A961F] shadow-sm"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="rounded-full border-4 border-[#6A961F] shadow-sm object-cover"
                 onError={(e) => (e.target.src = placeholderImage)}
               />
             </div>
             <h1
-              className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 text-center uppercase"
-              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+              className="text-2xl md:text-3xl font-bold text-[#023011] mb-2 text-center uppercase font-peugeot"
             >
               {profile.name}
             </h1>
             <h2
-              className="text-lg md:text-xl text-gray-600 mb-4 text-center capitalize"
-              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+              className="text-lg md:text-xl text-gray-600 mb-4 text-center capitalize font-peugeot"
             >
               {profile.title}
             </h2>
             <p
-              className="text-gray-700 text-sm md:text-base leading-relaxed text-center"
-              style={{ fontFamily: "'Peugeot', Helvetica, sans-serif" }}
+              className="text-gray-700 text-sm md:text-base leading-relaxed text-center font-peugeot"
             >
               {profile.bio || "No biography available."}
             </p>

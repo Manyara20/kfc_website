@@ -63,9 +63,9 @@ const ForestCardGrid = () => {
                 <Image
                   src={forest.image}
                   alt={forest.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
               {/* Forest Content */}

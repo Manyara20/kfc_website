@@ -41,7 +41,7 @@ export default function LoginPage() {
         </div>
         {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
         <div className="mb-4">
-          <label className="block mb-1" style={{ color: "#0D3C00" }}>Email</label>
+          <label className="block mb-1 text-[#0D3C00]">Email</label>
           <input
             type="email"
             value={email}
@@ -51,7 +51,7 @@ export default function LoginPage() {
           />
         </div>
         <div className="mb-4">
-          <label className="block mb-1" style={{ color: "#0D3C00" }}>Password</label>
+          <label className="block mb-1 text-[#0D3C00]">Password</label>
           <input
             type="password"
             value={password}
@@ -62,8 +62,7 @@ export default function LoginPage() {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-          style={{ backgroundColor: "#0D3C00" }}
+          className="w-full bg-[#0D3C00] text-white p-2 rounded hover:bg-[#1f5d2f]"
         >
           Login
         </button>

@@ -61,27 +61,18 @@ export default function JobVacancies() {
     <div className="min-h-screen ">
       <MainNavBar />
       <div
-        className="min-h-screen bg-cover bg-center bg-fixed p-4 relative overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-        }}
+        className="min-h-screen bg-cover bg-center bg-fixed p-4 relative overflow-hidden bg-forest-main"
+
       >
         <div
-          className="absolute inset-0 opacity-5 z-0"
-          style={{
-            backgroundImage: `url('https://www.transparenttextures.com/patterns/leaf.png')`,
-          }}
+          className="absolute inset-0 opacity-5 z-0 bg-leaf-pattern"
+
         ></div>
         <div className="max-w-7xl mx-auto py-4 px-4 relative z-10">
           {/* Main Card */}
           <div className="bg-gradient-to-br from-white to-[#f9f9f9] shadow-lg border border-[#e8ecef] mb-10 overflow-hidden">
             {/* Hero Section */}
-            <div
-              className="relative h-64 bg-cover bg-center flex items-center justify-center text-center text-white"
-              style={{
-                backgroundImage: `linear-gradient(rgba(13, 86, 2, 0.85), rgba(13, 86, 2, 0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')`,
-              }}
-            >
+            <div className="relative h-64 bg-[image:linear-gradient(rgba(13,86,2,0.85),rgba(13,86,2,0.85)),url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center flex items-center justify-center text-center text-white">
               <div className="relative z-10">
                 <h1 className="text-3xl sm:text-4xl font-extrabold text-shadow-lg">
                   Join the Kenya Forestry College

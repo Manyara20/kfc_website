@@ -5,12 +5,7 @@ import Image from "next/image";
 
 const Courses = () => {
   return (
-    <section
-      className="relative w-full h-[400px] sm:h-[500px] bg-cover bg-center text-white flex flex-col items-center justify-center transition-all duration-500"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/kfc/class_lab.jpg)`,
-      }}
-    >
+    <section className="relative w-full h-[400px] sm:h-[500px] bg-courses bg-cover bg-center text-white flex flex-col items-center justify-center transition-all duration-500">
       {/* Title */}
       <p className="text-lg sm:text-xl font-semibold text-center uppercase mb-6 px-4">
         Applications are invited for training programmes offered at Kenya <br /> Forestry

@@ -21,7 +21,7 @@ const PartnersSection = () => {
     <section className="bg-white py-12">
       <h2 className="text-3xl font-bold text-center mb-8  text-[#0d3c00]">Our Partners</h2>
       <div className="relative overflow-hidden w-full">
-        <div className="flex space-x-8 animate-move" style={{ minWidth: "max-content" }}>
+        <div className="flex space-x-8 animate-move min-w-max">
           {[...partners, ...partners].map((logo, index) => (
             <img
               key={index}
@@ -32,19 +32,6 @@ const PartnersSection = () => {
           ))}
         </div>
       </div>
-      <style jsx>{`
-        @keyframes move {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        .animate-move {
-          animation: move 12s linear infinite;
-        }
-      `}</style>
     </section>
   );
 };

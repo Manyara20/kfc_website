@@ -6,7 +6,54 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-family-peugeot: 'Peugeot', 'Peugeot New';
+  --font-family-peugeot: 'Peugeot', 'Peugeot New', Helvetica, sans-serif;
+}
+
+/* Reusable background utilities */
+@utility bg-forest-main {
+  background-image: linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+}
+
+@utility bg-forest-body {
+  background-image: linear-gradient(rgba(15, 90, 40, 0.8), rgba(15, 90, 40, 0.8)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@utility bg-forest-bg {
+  background-image: linear-gradient(rgba(0, 50, 20, 0.8), rgba(0, 50, 20, 0.8)), url('/images/background-template/background.jpg');
+}
+
+@utility bg-leaf-pattern {
+  background-image: url('https://www.transparenttextures.com/patterns/leaf.png');
+}
+
+@utility bg-counter {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/forestry_background.jpg');
+}
+
+@utility bg-courses {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/kfc/class_lab.jpg');
+}
+
+/* Keyframe animations */
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-move {
+  animation: move 12s linear infinite;
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Custom Fonts */
@@ -50,7 +97,7 @@ body {
 }
 
 /* General Styles */
-.fullscreen-section {
+@utility fullscreen-section {
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;

@@ -56,9 +56,9 @@ const CoreCourses = () => {
                 <Image
                   src={course.image}
                   alt={course.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
               {/* Course Content */}

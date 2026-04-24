@@ -64,9 +64,9 @@ const AcademicDepartment = () => {
                     <Image
                       src={department.image}
                       alt={department.title}
-                      layout="fill"
-                      objectFit="cover"
-                      className="w-full h-full"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
                     />
                   </div>
                   {/* Department Content */}

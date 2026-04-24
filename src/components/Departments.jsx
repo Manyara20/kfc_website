@@ -87,12 +87,7 @@ const Departments = () => {
   return (
     <div className="relative max-h-screen bg-[#0f5a28] py-14 px-4 sm:px-6 lg:px-8">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-fixed opacity-30"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')",
-        }}
-      />
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center bg-fixed opacity-30" />
 
       <div className="relative max-w-8xl mx-auto">
         <motion.div
